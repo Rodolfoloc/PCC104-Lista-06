@@ -10,26 +10,30 @@ Complemento das questões práticas:
 Algorthm Bubble Sort (A[0...n-1])  
 //Input: array qualquer  
 //Output: array ordenado crescente  
-    **for** i = 0 **to** n-1 do  
-      **for** j = i+1 **to** n-1 do  
-        **if** A[j] > A[i]  
-          Troque A[j] e A[i]  
-    **return** A[0...n-1]
-                                       
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**for** i = 0 **to** n-1 **do**  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**for** j = i+1 **to** n-1 do  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** A[j] > A[i]  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Troque A[j] e A[i]  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**return** A[0...n-1]
 
+
+
+<p align="justify">
 2)	Selection Sort é uma técnica de classificação bastante simples, pois envolve apenas encontrar o menor elemento em cada passagem e colocá-lo na posição correta. É eficiente quando o array é pequeno, mas seu desempenho é gravemente afetado à medida que aumenta. A técnica consiste de selecionar o menor elemento no array e trocar pelo primeiro elemento. Em seguida, ele troca o segundo menor elemento pelo segundo elemento e assim por diante.
+</p>
+
 Algorthm Selection Sort (A[0...n-1])
 //Input: array qualquer
 //Output: array ordenado
-for k = 0 to n-1 do
+**for** k = 0 **to** n-1 **do**
 [initialize] smallElem = A[k]
 [initialize] pos = K
-for j = k+1 to n-1 do
-if smallElem > A[j]
+**for** j = k+1 **to** n-1 **do**
+**if** smallElem > A[j]
 smalElem = A[j]
 pos = j
 Troque A[k] e A[pos]
-return A[0...n-1]
+**return** A[0...n-1]
                                
 
 3)	É a técnica de pesquisa mais básica, a chave a ser pesquisada é comparada sequencialmente com cada elemento.

@@ -18,7 +18,6 @@ Algorthm _Bubble Sort (A[0...n-1])_
 
 ![Imagem1](https://user-images.githubusercontent.com/81366236/112496533-94a43400-8d63-11eb-9c08-02300d829019.png)
 
-
 <p align="justify">
 2)	Selection Sort é uma técnica de classificação bastante simples, pois envolve apenas encontrar o menor elemento em cada passagem e colocá-lo na posição correta. É eficiente quando o array é pequeno, mas seu desempenho é gravemente afetado à medida que aumenta. A técnica consiste de selecionar o menor elemento no array e trocar pelo primeiro elemento. Em seguida, ele troca o segundo menor elemento pelo segundo elemento e assim por diante.
 </p>
@@ -36,9 +35,12 @@ Algorthm _Selection Sort (A[0...n-1])_
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Troque A[k] e A[pos]  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**return** A[0...n-1]
 
+![Imagem2](https://user-images.githubusercontent.com/81366236/112498924-bdc5c400-8d65-11eb-865f-f2a83204731b.png)
+
 <p align="justify">
 3)	É a técnica de pesquisa mais básica, a chave a ser pesquisada é comparada sequencialmente com cada elemento.
 </p>
+
 Algorthm _Sequential Search (A[0...n-1],K)_  
 // Input: um array qualquer e uma chave de pesquisa K  
 // Output: o índice do primeiro elemento do array cujo valor é igual a K ou -1 se nenhum elemento //for encontrado  
@@ -54,7 +56,7 @@ Algorthm _Sequential Search (A[0...n-1],K)_
 
 Padrão encontrado em 0, 9 e 12.
 
-Algorthm _BruteForceStringMatch (A[0...n-1], P[0...m-1])_  
+Algorthm _BruteForceStringMatch (A[0...n-1], P[0...m-1])_ 
 // Input: um array qualquer representando um texto e um array qualquer representando uma palavra  
 // Output: o índice do primeiro caractere do texto que inicia a palavra correspondente ou -1 se a pesquisa não for bem-sucedida  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**for** i = 0 **to** n-m **do**  

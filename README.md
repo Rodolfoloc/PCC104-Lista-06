@@ -55,12 +55,16 @@ Algorthm _Sequential Search (A[0...n-1],K)_
 </p>
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/81366236/112499441-39c00c00-8d66-11eb-9e20-2b769c1d8c8f.png">
+  <img src="https://user-images.githubusercontent.com/81366236/112500967-9b34aa80-8d67-11eb-9db8-2c67fa736cd9.png">
 </p>
 
 <p align="center">
-Padrão encontrado em 0, 9 e 12.  
+```diff
+Padrão encontrado em 0, 9 e 12. in red
+```
 </p>
+
+
 
 
 
@@ -78,6 +82,7 @@ Algorthm _BruteForceStringMatch (A[0...n-1], P[0...m-1])_
 <p align="justify">
 5)	Recebe um array de n pontos no plano, e o problema é descobrir o par de pontos mais próximo no array. Esse problema simula aplicações como controle de tráfego aéreo, onde monitorar aviões que se aproximam muito pode indicar uma possível colisão.
 </p>
+
 Algorthm _BruteForceClosestPair (P0(x0,y0)... Pn(xn,yn))_  
 // Input: uma lista de pontos qualquer  
 // Output: distância entre o par de pontos mais próximo  

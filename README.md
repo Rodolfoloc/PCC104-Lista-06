@@ -54,9 +54,17 @@ Algorthm _Sequential Search (A[0...n-1],K)_
 4)	Quando fazemos uma busca por uma string, algoritmos para pesquisa de padrões são usados. Percorra o padrão sobre o texto caractere por caractere e verifique se há uma correspondência. Se uma correspondência for encontrada, verifique as correspondências subsequentes.
 </p>
 
-Padrão encontrado em 0, 9 e 12.
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/81366236/112499441-39c00c00-8d66-11eb-9e20-2b769c1d8c8f.png">
+</p>
 
-Algorthm _BruteForceStringMatch (A[0...n-1], P[0...m-1])_ 
+<p align="center">
+Padrão encontrado em 0, 9 e 12.  
+</p>
+
+
+
+Algorthm _BruteForceStringMatch (A[0...n-1], P[0...m-1])_  
 // Input: um array qualquer representando um texto e um array qualquer representando uma palavra  
 // Output: o índice do primeiro caractere do texto que inicia a palavra correspondente ou -1 se a pesquisa não for bem-sucedida  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**for** i = 0 **to** n-m **do**  

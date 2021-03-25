@@ -59,14 +59,8 @@ Algorthm _Sequential Search (A[0...n-1],K)_
 </p>
 
 <p align="center">
-```diff
-Padrão encontrado em 0, 9 e 12. in red
-```
+Padrão encontrado em 0, 9 e 12
 </p>
-
-
-
-
 
 Algorthm _BruteForceStringMatch (A[0...n-1], P[0...m-1])_  
 // Input: um array qualquer representando um texto e um array qualquer representando uma palavra  

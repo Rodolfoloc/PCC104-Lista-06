@@ -117,3 +117,22 @@ Algorthm _Convex Hull (P0(x0,y0)... Pn(xn,yn))_
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**else**  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**return** -1  
 
+<p align="justify">
+7)	Dado um conjunto de pontos e distâncias entre cada par dos pontos, o problema é encontrar a rota mais curta possível que visite todos os pontos exatamente uma vez e retorne ao ponto de partida. O problema pode ser definido encontrar o circuito hamiltoniano mais curto do gráfico. Um circuito hamiltoniano é definido como um ciclo que passa por todos os vértices do gráfico exatamente uma vez.
+</p>
+
+<p align="center">
+  <img src="">
+</p>
+
+<p align="justify">
+Assim, podemos obter todos
+os passeios gerando todas as permutações de n - 1 cidades intermediárias, calcule
+a duração do passeio e encontre o mais curto entre eles.
+
+1.	Considere a cidade 1 como ponto inicial e final. Como a rota é cíclica, podemos considerar qualquer ponto como ponto de partida.
+2.	Gere tudo (n-1)! permutações de cidades.
+3.	Calcule o custo de cada permutação e acompanhe a permutação de custo mínimo.
+4.	Retorne a permutação com custo mínimo.
+
+</p>

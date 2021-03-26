@@ -164,3 +164,25 @@ A ordem de busca da árvore acima é 1 2 3 4 5
 <p align="justify">
 Ao contrário das árvores, os grafos podem conter ciclos, então podemos chegar ao mesmo nó novamente. Para evitar o processamento de um nó mais de uma vez, usamos um array booleano para armazenar os nós visitados. Para simplificar, assume-se que todos os vértices são alcançáveis a partir do vértice inicial. Por exemplo, no grafo a seguir, iniciamos a travessia do vértice 2. Quando chegamos ao vértice 0, procuramos todos os vértices adjacentes dele. 2 também é um vértice adjacente de 0. Se não marcarmos os vértices visitados, então 2 será processado novamente e se tornará um processo sem fim. A amplitude da primeira travessia do grafo a seguir é 2, 0, 3, 1.
 </p>
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/81366236/112675764-503d9480-8e46-11eb-8297-e190bd291e1b.png">
+</p>
+
+Algorthm _BSF (G)_  
+// Input: Grafo G = <V,E>  
+// Output: Vértices de G na ordem em que são visitados  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;count = 0  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**for** cada vértice v em V **do**  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** v é marcado como 0  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bfs(v)  
+
+Function _BSF (v)_  
+// Visita todos os vértices não visitados conectados ao vértice v por um caminho e os numera na ordem em que são visitados por meio de contagem de variável global  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;count = count + 1;  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**while** a fila não estiver vazia **do**  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**for** cada vértice w em V adjacente ao vértice frontal **do** 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** w é marcado como 0  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;count = count + 1;  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;adiciona w à fila  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;remove o vértice da frente da fila

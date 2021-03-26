@@ -154,7 +154,13 @@ Assim, podemos obter a distância mais curta entre os pontos gerando todas as pe
 </p>
 
 <p align="center">
-  <img src="">
+  <img src="https://user-images.githubusercontent.com/81366236/112671905-917f7580-8e41-11eb-97e3-8d4dd7a8efe0.png">
 </p>
 
-A passagem da ordem de nível da árvore acima é 1 2 3 4 5
+<p align="center">
+A ordem de busca da árvore acima é 1 2 3 4 5
+</p>
+
+<p align="justify">
+Ao contrário das árvores, os grafos podem conter ciclos, então podemos chegar ao mesmo nó novamente. Para evitar o processamento de um nó mais de uma vez, usamos um array booleano para armazenar os nós visitados. Para simplificar, assume-se que todos os vértices são alcançáveis a partir do vértice inicial. Por exemplo, no grafo a seguir, iniciamos a travessia do vértice 2. Quando chegamos ao vértice 0, procuramos todos os vértices adjacentes dele. 2 também é um vértice adjacente de 0. Se não marcarmos os vértices visitados, então 2 será processado novamente e se tornará um processo sem fim. A amplitude da primeira travessia do grafo a seguir é 2, 0, 3, 1.
+</p>

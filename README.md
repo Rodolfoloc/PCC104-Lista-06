@@ -135,9 +135,10 @@ Matriz que representa o grafo acima:
 <p align="justify">
 Assim, podemos obter a distância mais curta entre os pontos gerando todas as permutações de n - 1 cidades intermediárias, calculando a duração do trajeto e encontrando o mais curto entre eles:
 </p>
-  1.	Considere o ponto 1 como ponto inicial e final. Como a rota é cíclica, podemos considerar qualquer ponto como ponto de partida.  
-  2.	Gere todas as (n-1)! permutações dos pontos.  
-  3.	Calcule o custo de cada permutação e guarde o custo mínimo.  
-  4.	Retorne a permutação com custo mínimo.  
+
+1.	Considere o ponto 1 como ponto inicial e final. Como a rota é cíclica, podemos considerar qualquer ponto como ponto de partida.  
+2.	Gere todas as (n-1)! permutações dos pontos.
+3.	Calcule o custo de cada permutação e guarde o custo mínimo.
+4.	Retorne a permutação com custo mínimo.
 
 

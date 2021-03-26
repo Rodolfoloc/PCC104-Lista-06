@@ -126,14 +126,14 @@ Algorthm _Convex Hull (P0(x0,y0)... Pn(xn,yn))_
 </p>
 
 <p align="justify">
-Matriz que representa o grafo acima:
-(00, 10, 15, 20  
- 10, 00, 35, 25  
- 15, 35, 00, 30  
- 20, 25, 30, 00)  
-Assim, podemos obter a distância mais curta entre os pontos gerando todas as permutações de n - 1 cidades intermediárias, calculando a duração do trajeto e encontrando o mais curto entre eles:
-1.	Considere o ponto 1 como ponto inicial e final. Como a rota é cíclica, podemos considerar qualquer ponto como ponto de partida.
-2.	Gere todas as (n-1)! permutações dos pontos.
-3.	Calcule o custo de cada permutação e guarde o custo mínimo.
-4.	Retorne a permutação com custo mínimo.
+Matriz que representa o grafo acima:  
+  (00, 10, 15, 20  
+   10, 00, 35, 25
+   15, 35, 00, 30
+   20, 25, 30, 00)  
+Assim, podemos obter a distância mais curta entre os pontos gerando todas as permutações de n - 1 cidades intermediárias, calculando a duração do trajeto e encontrando o mais curto entre eles:  
+  1.	Considere o ponto 1 como ponto inicial e final. Como a rota é cíclica, podemos considerar qualquer ponto como ponto de partida.  
+  2.	2.	2.	Gere todas as (n-1)! permutações dos pontos.  
+  3.	3.	3.	Calcule o custo de cada permutação e guarde o custo mínimo.  
+  4.	4.	4.	Retorne a permutação com custo mínimo.  
 </p>

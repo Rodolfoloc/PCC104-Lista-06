@@ -107,7 +107,7 @@ Quando o resultado da fórmula acima é positivo, p3 está à esquerda da linha 
 
 Algorthm _Convex Hull (P0(x0,y0)... Pn(xn,yn))_  
 // Input: uma lista de pontos qualquer  
-// Output: Pontos que pertencem ao casco convexo
+// Output: Pontos que pertencem ao casco convexo  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**for** i = 0 **to** n-1 **do**  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**for** j = 0 **to** n-1 **do**  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**for** k = 0 **to** n-1 **do**  

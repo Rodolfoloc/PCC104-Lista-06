@@ -89,18 +89,14 @@ Algorthm _BruteForceClosestPair (P0(x0,y0)... Pn(xn,yn))_
 6)	Suponha que haja 13 pontos (p0 - p12) no plano. Se alguns pontos podem ser transformados em um polígono que contêm o restante dos pontos, esse polígono é uma casca convexa. 
 </p>
 
+![Imagem4](https://user-images.githubusercontent.com/81366236/112630578-895d1100-8e14-11eb-8dbe-2e6dca19c238.png)
+
+<p align="justify">
+Em um sistema de coordenadas bidimensional, dois pontos determinam uma linha. Se os pontos restantes estão do mesmo lado da linha eles são pontos do casco convexo, caso contrário, não são:
+</p>
+
 
 
 <p align="justify">
-Colocamos esses pontos em um sistema de coordenadas bidimensional, de modo que cada ponto pode ser representado por (x, y).
-fornece o número de pontos 13 e as coordenadas de cada ponto. Encontre o ponto que constitui o casco convexo?
-
- 
-
-
-Idéia: Dois pontos determinam uma linha. Se os pontos restantes estão do mesmo lado da linha, os dois pontos são pontos no casco convexo, caso contrário, não é.
-
-
-
 Quando o resultado da fórmula acima é positivo, p3 está à esquerda da linha p1p2; quando o resultado é negativo, p3 está à direita da linha p1p2.
 </p>

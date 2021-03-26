@@ -141,4 +141,10 @@ Assim, podemos obter a distância mais curta entre os pontos gerando todas as pe
 3.	Calcule o custo de cada permutação e guarde o custo mínimo.
 4.	Retorne a permutação com custo mínimo.
 
+<p align="justify">
+8)	Dados os pesos e valores de n itens, coloque esses itens em uma mochila com capacidade capacity para obter o valor total máximo na mochila. Dados dois arrays inteiros weights[0..n-1] e values[0..n-1] (representam pesos e valores associados a n itens, respectivamente) e um inteiro capacity que representa a capacidade da mochila, descubra o subconjunto de valor máximo de forma que a soma dos pesos deste subconjunto seja menor ou igual a capacity. Não é possível dividir um item, ou escolha o item completo ou não escolha. Ilustração do problema:
+</p>
 
+<p align="center">
+  <img src="">
+</p>

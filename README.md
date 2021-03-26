@@ -148,3 +148,13 @@ Assim, podemos obter a distância mais curta entre os pontos gerando todas as pe
 <p align="center">
   <img src="https://user-images.githubusercontent.com/81366236/112666897-68f47d00-8e3b-11eb-8303-b533dc7710eb.png">
 </p>
+
+<p align="justify">
+9)	Busca em largura de uma árvore:
+</p>
+
+<p align="center">
+  <img src="">
+</p>
+
+A passagem da ordem de nível da árvore acima é 1 2 3 4 5

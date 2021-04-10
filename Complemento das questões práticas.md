@@ -41,30 +41,21 @@ O maior número móvel é 3. Troque 1 e 3. <3 <1 <2
 
 O maior número móvel é 2. Troque 1 e 2 e mude a direção de elementos maiores. 3> <2 <1
 
-O maior número móvel é 2. Troque 1 e 2 e mude a direção de elementos maiores. 3> <2 <1
+O maior número móvel é 2. Troque 2 e 3. <2 3> <1
 
 O maior número móvel é 1. Troque 1 e 3 e mude a direção de elementos maiores. 2> <1 3>
 
 O maior número móvel é 1. Troque 1 e 2. <1 2> 3>
 
-
-
-
-
-Algorthm _Selection Sort (A[0...n-1])_  
-//Input: array qualquer  
-//Output: array ordenado  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**for** k = 0 **to** n-1 **do**  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[initialize] smallElem = A[k]  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[initialize] pos = K  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**for** j = k+1 **to** n-1 **do**  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** smallElem > A[j]  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;smalElem = A[j]  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos = j  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Troque A[k] e A[pos]  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**return** A[0...n-1]
-
-![Imagem2](https://user-images.githubusercontent.com/81366236/112498924-bdc5c400-8d65-11eb-865f-f2a83204731b.png)
+Algorthm _JohnsonTrotter(n)_  
+//Input: Um inteiro positivo qualquer  
+//Output: Uma lista de todas as suas permutações  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;inicializar a primeira permutação com <1 <2 ... <n  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**while** a última permutação tem um elemento móvel **do**  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Passo 1  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Passo 2  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Passo 3  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;adicione a nova permutação à lista  
 
 <p align="justify">
 3)	É a técnica de pesquisa mais básica, a chave a ser pesquisada é comparada sequencialmente com cada elemento.

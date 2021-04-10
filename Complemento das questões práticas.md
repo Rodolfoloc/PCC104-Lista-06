@@ -22,17 +22,34 @@ Algorthm _Insertion Sort (A[0...n-1])_
   <img src="https://user-images.githubusercontent.com/81366236/114271761-74be7280-99e9-11eb-9045-de41d7c31d41.png">
 </p>
 
+<p align="justify">
+2)	O algoritmo Johnson-Trotter gera cada permutação trocando apenas dois elementos adjacentes da sequência, da seguinte forma:
+</p>
 
-
-
-
-
-
-
+1.	Descobrir o maior número inteiro móvel na sequência. Um inteiro é considerado móvel se for maior que seu vizinho imediato na direção de referência.
+2.	Trocar o inteiro móvel e o inteiro adjacente da direção de referência.
+3.	Mudar a direção de todos os elementos cujo valor é maior do que o valor inteiro móvel.
+4.	Repitir o passo 1 até que não haja nenhum inteiro móvel restante na sequência.
 
 <p align="justify">
-2)	Selection Sort é uma técnica de classificação bastante simples, pois envolve apenas encontrar o menor elemento em cada passagem e colocá-lo na posição correta. É eficiente quando o array é pequeno, mas seu desempenho é gravemente afetado à medida que aumenta. A técnica consiste de selecionar o menor elemento no array e trocar pelo primeiro elemento. Em seguida, ele troca o segundo menor elemento pelo segundo elemento e assim por diante.
-</p>
+Ex: Gerar permutações de tamanho 3.
+Imprimir 1 2 3. Inicialmente todas as direções estão da direita para a esquerda <1 <2 <3.
+
+Os números móveis são 2 e 3. O maior número móvel é 3, então troque 2 e 3. Se 3 é maior, não mudar nenhuma direção <1 <3 <2
+
+O maior número móvel é 3. Troque 1 e 3. <3 <1 <2
+
+O maior número móvel é 2. Troque 1 e 2 e mude a direção de elementos maiores. 3> <2 <1
+
+O maior número móvel é 2. Troque 1 e 2 e mude a direção de elementos maiores. 3> <2 <1
+
+O maior número móvel é 1. Troque 1 e 3 e mude a direção de elementos maiores. 2> <1 3>
+
+O maior número móvel é 1. Troque 1 e 2. <1 2> 3>
+
+
+
+
 
 Algorthm _Selection Sort (A[0...n-1])_  
 //Input: array qualquer  

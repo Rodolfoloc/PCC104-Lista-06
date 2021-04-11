@@ -103,36 +103,10 @@ Algorthm _BinarySearch(A[0..n − 1], K)_
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**return** -1
 
 <p align="justify">
-6)	Suponha que haja 13 pontos (p0 - p12) no plano. Se alguns pontos podem ser transformados em um polígono que contêm o restante dos pontos, esse polígono é uma casca convexa. 
+6)	Interpolation Search é um aprimoramento da Binary Search. A Binary Search sempre vai para o elemento do meio para verificar. Por outro lado, a Interpolation Search pode ir para locais diferentes de acordo com o valor da chave que está sendo pesquisada. O algoritmo imita a maneira como procuramos por um nome em uma lista telefônica: se estivermos procurando por alguém chamado Brown, abrimos o livro não no meio, mas muito perto do início, ao contrário da nossa ação ao procurar alguém chamado, Smith. A posição é calculada da seginte forma:
 </p>
 
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/81366236/112630578-895d1100-8e14-11eb-8dbe-2e6dca19c238.png">
-</p>
-
-<p align="justify">
-Em um sistema de coordenadas bidimensional, dois pontos determinam uma linha. Se os pontos restantes estão do mesmo lado da linha eles são pontos do casco convexo, caso contrário, não são:
-</p>
-
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/81366236/112630910-02f4ff00-8e15-11eb-81cd-88c511d0f6a2.png">
-</p>
-
-<p align="justify">
-Quando o resultado da fórmula acima é positivo, p3 está à esquerda da linha p1p2; quando o resultado é negativo, p3 está à direita da linha p1p2.
-</p>
-
-Algorthm _Convex Hull (P0(x0,y0)... Pn(xn,yn))_  
-// Input: uma lista de pontos qualquer  
-// Output: Pontos que pertencem ao casco convexo  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**for** i = 0 **to** n-1 **do**  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**for** j = 0 **to** n-1 **do**  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**for** k = 0 **to** n-1 **do**  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;det(i,j,k)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** det (i,j,k) < 0  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**return** det(i,j,k)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**else**  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**return** -1  
+![\Large x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}](https://latex.codecogs.com/svg.latex?\Large&space;pos=l+\frac{(x-arr[l])(r-l)}{arr[r]-arr[l]}) 
 
 <p align="justify">
 7)	Dado um conjunto de pontos e distâncias entre cada par dos pontos, o problema é encontrar a rota mais curta possível que visite todos os pontos exatamente uma vez e retorne ao ponto de partida. O problema pode ser definido encontrar o circuito hamiltoniano mais curto do gráfico. Um circuito hamiltoniano é definido como um ciclo que passa por todos os vértices do gráfico exatamente uma vez.

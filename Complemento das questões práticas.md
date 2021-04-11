@@ -70,7 +70,7 @@ Condição base: O caso base para este problema será quando o valor de n = 0 ou
 </p>
 
 <p align="justify">
-Condição Recursiva: Para qualquer valor maior que 1, gere recursivamente os códigos Gray dos n - 1 bits e, em seguida, para cada um dos códigos Gray gerados, adicione o prefixo 0 e 1.
+Condição recursiva: Para qualquer valor maior que 1, gere recursivamente os códigos Gray dos n - 1 bits e, em seguida, para cada um dos códigos Gray gerados, adicione o prefixo 0 e 1.
 </p>
 
 Algorthm _BRGC(n)_  

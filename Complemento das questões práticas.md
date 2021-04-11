@@ -111,42 +111,21 @@ Algorthm _BinarySearch(A[0..n − 1], K)_
 </p>
 
 <p align="justify">
-7)	Fake Coin Problem: Existem n moedas idênticas. Uma moeda é falsa e pesa menos do que as moedas reais. A única maneira de comparar moedas é uma balança. Utilizando a 
-
-// initially called with low = 0, high = N-1
-  BinarySearch(A[0..N-1], value, low, high) {
-      // invariants: value > A[i] for all i < low
-                     value < A[i] for all i > high
-      if (high < low)
-          return not_found // value would be inserted at index "low"
-      mid = (low + high) / 2
-      if (A[mid] > value)
-          return BinarySearch(A, value, low, mid-1)
-      else if (A[mid] < value)
-          return BinarySearch(A, value, mid+1, high)
-      else
-          return mid
-  }
+7)	Fake Coin Problem: Existem n moedas idênticas. Uma moeda é falsa e pesa menos do que as moedas reais. A única maneira de comparar moedas é uma balança. Utilizando a Recursive Binary Search: 
 </p>
 
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/81366236/112662190-2a0ff880-8e36-11eb-87d5-b4f2f5bc0573.png">
-</p>
+Algorthm _RecursiveBinarySearch(A[0..n − 1], l, r, K)_  
+// Input: Um array qualquer contendo um número para moedas verdadeiras e um número menor para a moeda falsa, a menor e a maior posição do vetor, o número que representa a moeda falsa  
+// Output: Índice do array que contém a moda falsa ou -1 se não houver moeda falsa  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;l = 0  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;r = n − 1  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** (r >= l)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;m = (l + r) / 2  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** K = A[m] **return** m  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** sum(r) > sum(l) **return** RecursiveBinarySearch(A[0..n − 1], l, m - 1, K)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**return** RecursiveBinarySearch(A[0..n − 1], l, m + 1, K)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**return** -1
 
-
-Matriz que representa o grafo acima:  
-(00, 10, 15, 20  
- 10, 00, 35, 25  
- 15, 35, 00, 30  
- 20, 25, 30, 00)
-
-<p align="justify">
-Assim, podemos obter a distância mais curta entre os pontos gerando todas as permutações de n - 1 cidades intermediárias, calculando a duração do trajeto e encontrando o mais curto entre eles:
-</p>
-
-1.	Considere o ponto 1 como ponto inicial e final. Como a rota é cíclica, podemos considerar qualquer ponto como ponto de partida.  
-2.	Gere todas as (n-1)! permutações dos pontos.
-3.	Calcule o custo de cada permutação e guarde o custo mínimo.
 4.	Retorne a permutação com custo mínimo.
 
 <p align="justify">

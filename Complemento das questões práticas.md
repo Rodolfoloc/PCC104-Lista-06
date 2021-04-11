@@ -88,15 +88,19 @@ Algorthm _BRGC(n)_
 5)	A Binary Search pesquisa um array ordenado dividindo repetidamente o intervalo da pesquisa pela metade. Comece com um intervalo cobrindo todo o array. Se o valor da chave for menor que o item no meio do intervalo, restrinja o intervalo à metade inferior. Caso contrário, estreite-o para a metade superior. Verifique repetidamente até que o valor seja encontrado ou o intervalo esteja vazio. Exemplo :
 </p>
 
+![Binary-Search](https://user-images.githubusercontent.com/81366236/114305989-c120b580-9ab0-11eb-9f6e-bb197739fc7c.png)
 
-
-Algorthm _BruteForceClosestPair (P0(x0,y0)... Pn(xn,yn))_  
-// Input: uma lista de pontos qualquer  
-// Output: distância entre o par de pontos mais próximo  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**for** i = 0 **to** n-1 **do**  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**for** j = i+1 **to** n-1 **do**  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;d = min(d, sqrt((xi - xj)2 + (yi - yj)2);  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**return** d
+Algorthm _BinarySearch(A[0..n − 1], K)_  
+// Input: Um array qualquer ordenado crescente e uma chave    
+// Output: Índice do array é igual a chave ou -1 se não houver tal elemento  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;l = 0  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;r = n − 1  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**while** l <= r **do**  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;m = (l + r) / 2  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** K = A[m] **return** m  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**else if** K < A[m] r = m − 1  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**else** l = m + 1  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**return** -1
 
 <p align="justify">
 6)	Suponha que haja 13 pontos (p0 - p12) no plano. Se alguns pontos podem ser transformados em um polígono que contêm o restante dos pontos, esse polígono é uma casca convexa. 

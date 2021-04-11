@@ -84,8 +84,11 @@ Algorthm _BRGC(n)_
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;anexe L2 a L1 para obter a lista L  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**return** L
 
-5)	Recebe um array de n pontos no plano, e o problema é descobrir o par de pontos mais próximo no array. Esse problema simula aplicações como controle de tráfego aéreo, onde monitorar aviões que se aproximam muito pode indicar uma possível colisão.
+<p align="justify">
+5)	A Binary Search pesquisa um array ordenado dividindo repetidamente o intervalo da pesquisa pela metade. Comece com um intervalo cobrindo todo o array. Se o valor da chave for menor que o item no meio do intervalo, restrinja o intervalo à metade inferior. Caso contrário, estreite-o para a metade superior. Verifique repetidamente até que o valor seja encontrado ou o intervalo esteja vazio. Exemplo :
 </p>
+
+
 
 Algorthm _BruteForceClosestPair (P0(x0,y0)... Pn(xn,yn))_  
 // Input: uma lista de pontos qualquer  

@@ -78,11 +78,11 @@ Algorthm _BRGC(n)_
 //Output: Uma lista de todas as cadeias de bits de comprimento n compondo o código Gray  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** n = 1 faça a lista L contendo cadeias de bits 0 e 1 nesta ordem  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**else** gere a lista L1 de sequências de bits de tamanho n - 1 chamando BRGC (n - 1)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;copie a lista L1 para a lista L2 na ordem inversa  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;adicione 0 na frente de cada string de bits na lista L1  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;adicione 1 na frente de cada string de bits na lista L2  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;anexe L2 a L1 para obter a lista L  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**return L**
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;copie a lista L1 para a lista L2 na ordem inversa  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;adicione 0 na frente de cada string de bits na lista L1  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;adicione 1 na frente de cada string de bits na lista L2  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;anexe L2 a L1 para obter a lista L  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**return** L
 
 5)	Recebe um array de n pontos no plano, e o problema é descobrir o par de pontos mais próximo no array. Esse problema simula aplicações como controle de tráfego aéreo, onde monitorar aviões que se aproximam muito pode indicar uma possível colisão.
 </p>

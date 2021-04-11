@@ -62,8 +62,27 @@ Algorthm _JohnsonTrotter(n)_
 </p>
 
 <p align="justify">
-4)	AQUI
+4)	O Binary Reflected Gray Code utiliza uma abordagem recursiva para gerar o código Gray. O código de Gray é um sistema binário onde de um número para outro apenas um bit varia. A ideia é anexar recursivamente os bits 0 e 1 até que o número de bits não seja igual a n. 
 </p>
+
+<p align="justify">
+Condição de Base: O caso base para este problema será quando o valor de n = 0 ou 1.
+</p>
+
+<p align="justify">
+Condição Recursiva: Para qualquer valor maior que 1, gere recursivamente os códigos Gray dos n - 1 bits e, em seguida, para cada um dos códigos Gray gerados, adicione o prefixo 0 e 1.
+</p>
+
+Algorthm _BRGC(n)_  
+//Input: Um inteiro positivo qualquer  
+//Output: Uma lista de todas as cadeias de bits de comprimento n compondo o código Gray  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** n = 1 faça a lista L contendo cadeias de bits 0 e 1 nesta ordem  
+nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**else** gere a lista L1 de sequências de bits de tamanho n - 1 chamando BRGC (n - 1)  
+nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;copie a lista L1 para a lista L2 na ordem inversa  
+nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;adicione 0 na frente de cada string de bits na lista L1  
+nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;adicione 1 na frente de cada string de bits na lista L2  
+nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;anexe L2 a L1 para obter a lista L  
+nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**return L**
 
 5)	Recebe um array de n pontos no plano, e o problema é descobrir o par de pontos mais próximo no array. Esse problema simula aplicações como controle de tráfego aéreo, onde monitorar aviões que se aproximam muito pode indicar uma possível colisão.
 </p>

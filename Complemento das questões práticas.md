@@ -66,7 +66,7 @@ Algorthm _JohnsonTrotter(n)_
 </p>
 
 <p align="justify">
-Condição de Base: O caso base para este problema será quando o valor de n = 0 ou 1.
+Condição base: O caso base para este problema será quando o valor de n = 0 ou 1.
 </p>
 
 <p align="justify">

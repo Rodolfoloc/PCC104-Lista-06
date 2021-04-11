@@ -111,7 +111,7 @@ Algorthm _BinarySearch(A[0..n − 1], K)_
 </p>
 
 <p align="justify">
-7)	Dado um conjunto de pontos e distâncias entre cada par dos pontos, o problema é encontrar a rota mais curta possível que visite todos os pontos exatamente uma vez e retorne ao ponto de partida. O problema pode ser definido encontrar o circuito hamiltoniano mais curto do gráfico. Um circuito hamiltoniano é definido como um ciclo que passa por todos os vértices do gráfico exatamente uma vez.
+7)	Fake Coin Problem: Existem n moedas idênticas. Uma moeda é falsa e pesa menos do que as moedas reais. A única maneira de comparar moedas é uma balança. 
 </p>
 
 <p align="center">

@@ -106,7 +106,9 @@ Algorthm _BinarySearch(A[0..n − 1], K)_
 6)	Interpolation Search é um aprimoramento da Binary Search. A Binary Search sempre vai para o elemento do meio para verificar. Por outro lado, a Interpolation Search pode ir para locais diferentes de acordo com o valor da chave que está sendo pesquisada. O algoritmo imita a maneira como procuramos por um nome em uma lista telefônica: se estivermos procurando por alguém chamado Brown, abrimos o livro não no meio, mas muito perto do início, ao contrário da nossa ação ao procurar alguém chamado, Smith. A posição é calculada da seginte forma:
 </p>
 
-![\Large x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}](https://latex.codecogs.com/svg.latex?\Large&space;pos=l+\frac{(x-arr[l])(r-l)}{arr[r]-arr[l]}) 
+<p align="center">
+  <img src="https://latex.codecogs.com/svg.latex?\Large&space;pos=l+\frac{(x-arr[l])(r-l)}{arr[r]-arr[l]}">
+</p>
 
 <p align="justify">
 7)	Dado um conjunto de pontos e distâncias entre cada par dos pontos, o problema é encontrar a rota mais curta possível que visite todos os pontos exatamente uma vez e retorne ao ponto de partida. O problema pode ser definido encontrar o circuito hamiltoniano mais curto do gráfico. Um circuito hamiltoniano é definido como um ciclo que passa por todos os vértices do gráfico exatamente uma vez.

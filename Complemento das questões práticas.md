@@ -159,6 +159,11 @@ Algorthm _Quickselect(A[0..n − 1], l, r, k)_
 + As subárvores esquerda e direita também devem ser árvore de pesquisa binária. 
 + Não deve haver nós duplicados.
 
+Estrutura da árvore:
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/81366236/114926019-37514f00-9e06-11eb-81e4-60607d89c2aa.png">
+</p>
+
 <p align="justify">
 Inserir um valor
 

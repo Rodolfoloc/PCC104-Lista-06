@@ -158,3 +158,8 @@ Algorthm _Quickselect(A[0..n − 1], l, r, k)_
 + A subárvore direita de um nó contém apenas nós com valores maiores que o valor do nó.
 + As subárvores esquerda e direita também devem ser árvore de pesquisa binária. 
 + Não deve haver nós duplicados.
+
+<p align="justify">
+Inserir um valor   
+Sempre inserir na folha. Pesquisar um valor da raiz até um nó folha. Depois que um nó folha adequado é encontrado, o novo nó é adicionado como filho do nó folha.
+</p>

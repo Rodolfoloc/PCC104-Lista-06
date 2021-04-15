@@ -161,5 +161,6 @@ Algorthm _Quickselect(A[0..n − 1], l, r, k)_
 
 <p align="justify">
 Inserir um valor
+
   Sempre inserir na folha. Pesquisar um valor da raiz até um nó folha. Depois que um nó folha adequado é encontrado, o novo nó é adicionado como filho do nó folha.
 </p>

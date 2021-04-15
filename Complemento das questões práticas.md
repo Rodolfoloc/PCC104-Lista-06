@@ -151,5 +151,9 @@ Algorthm _Quickselect(A[0..n − 1], l, r, k)_
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**else** quickselect(A, l, s - 1, k)
 
 <p align="justify">
-9)	Fazer
+9)	Uma árvore de pesquisa binária (BST) é definida como uma árvore binária baseada em nós que possui as seguintes propriedades:  
 </p>
++ A subárvore esquerda de um nó contém apenas nós com valores menores que o valor do nó;
++ A subárvore direita de um nó contém apenas nós com valores maiores que o valor do nó.
++ As subárvores esquerda e direita também devem ser árvore de pesquisa binária. 
++ Não deve haver nós duplicados.

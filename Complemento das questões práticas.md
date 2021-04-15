@@ -127,8 +127,28 @@ Algorthm _RecursiveBinarySearch(A[0..n − 1], l, r, K)_
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**return** -1
 
 <p align="justify">
-8)	AQUI
+8)	Este algoritmo funciona em duas etapas. A etapa de particionamento escolhe um elemento pivô e, em seguida, reorganiza os elementos da matriz de modo que tudo o que for menor que o pivô fique a esquerda; tudo que for maior que o pivô fique a direita; e o pivô esteja no lugar correto. Para encontrar medianas, basicamente, deve-se chamar recursivamente a função de partição, até que o pivô alcance a posição N / 2. Obs: Usando o algoritmo de seleção, é possível encontrar qualquer K-ésimo menor elemento.
 </p>
+
+Algorthm _LomutoPartition(A[0..n − 1], l, r)_  
+// Input: Um array qualquer ou um subarray do array  
+// Output: A nova posição do pivô  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p = A[l]  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;s = l  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**for** i = l + 1 **to** r **do**  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** A[i] < p  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;s = s + 1  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;swap(A[s], A[i])  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;swap(A[l], A[s])  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**return** s  
+
+Algorthm _Quickselect(A[0..n − 1], l, r, k)_  
+// Input: Um array qualquer e uma posição do array  
+// Output: O valor do k-ésimo menor elemento do array  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;s = LomutoPartition(A, l, r)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** s = k - 1 **return** A[s]  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**else if** s < k quickselect(A, s + 1, r, k)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**else** quickselect(A, l, s - 1, k)
 
 <p align="justify">
 9)	Fazer

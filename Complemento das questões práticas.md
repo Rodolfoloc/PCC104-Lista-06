@@ -183,3 +183,10 @@ Buscar um valor
 
 Para pesquisar um número, começar pela raiz, comparar o valor a ser pesquisado com o valor da raiz. Se for igual termine a pesquisa. Se for menor, ir para a subárvore esquerda, caso contrário ir para a subárvore direita. Portanto, pesquisar um elemento na árvore é basicamente um percurso em que a cada passo deve-se ir para a esquerda ou para a direita. A cada passo uma das subárvores é descartada até que o espaço de busca seja reduzido a apenas um nó.
 </p>
+
+Algorthm _Search Tree (root, key)_  
+//Input: O nó raiz e um valor qualquer a ser pesquisado  
+//Output: O nó contendo o valor pesquisado ou NULL se o valor não foi encontrado  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** root = NULL **or** root.data = key **return** root  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** root.data < key  **return** Search Tree (root.right, key)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**return** Search(root.left, key)  

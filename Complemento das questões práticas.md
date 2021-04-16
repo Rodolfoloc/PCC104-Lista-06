@@ -169,3 +169,17 @@ Inserir um valor
 
 Sempre inserir na folha. Pesquisar um valor da raiz até um nó folha. Depois que um nó folha adequado é encontrado, o novo nó é adicionado como filho do nó folha.
 </p>
+
+Algorthm _Insert Tree (root, value)_  
+//Input: O nó raiz e um valor qualquer para ser inserido no novo nó  
+//Output: O nó raiz após a inserção  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** root = NULL **return** BST(value)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** value > root.data root.right = Insert Tree(root.right, value)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**else** root.left = Insert Tree(root.left, value)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**return** root  
+
+<p align="justify">
+Buscar um valor
+
+Para pesquisar um número, começar pela raiz, comparar o valor a ser pesquisado com o valor da raiz. Se for igual termine a pesquisa. Se for menor, ir para a subárvore esquerda, caso contrário ir para a subárvore direita. Portanto, pesquisar um elemento na árvore é basicamente um percurso em que a cada passo deve-se ir para a esquerda ou para a direita. A cada passo uma das subárvores é descartada até que o espaço de busca seja reduzido a apenas um nó.
+</p>

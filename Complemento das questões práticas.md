@@ -4,7 +4,7 @@
 Complemento das questões práticas:
 
 <p align="justify">
-1)	Insertion sort é um algoritmo de ordenação simples que funciona semelhante à maneira como se classifica as cartas de baralho em mãos. O array é virtualmente dividido em uma parte ordenada e outra não ordenada. Os valores da parte não ordenada são selecionados e colocados na posição correta da parte ordenada. 
+1)	Merge Sort é um algoritmo de ordenação que divide o array de entrada em duas metades, chama a si mesmo para as duas metades e, em seguida, mescla as duas metades classificadas.
 </p>
 
 Algorthm _Insertion Sort (A[0...n-1])_  
@@ -17,6 +17,35 @@ Algorthm _Insertion Sort (A[0...n-1])_
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A[j + 1] = A[j]  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;j = j - 1  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A[j + 1] = v
+
+ALGORITHM Mergesort(A[0..n − 1])
+//Sorts array A[0..n − 1] by recursive mergesort
+//Input: An array A[0..n − 1] of orderable elements
+//Output: Array A[0..n − 1] sorted in nondecreasing order
+if n > 1
+copy A[0..n/2 − 1] to B[0..n/2 − 1]
+copy A[n/2..n − 1] to C[0..n/2 − 1]
+Mergesort(B[0..n/2 − 1])
+Mergesort(C[0..n/2 − 1])
+Merge(B, C, A) //see below
+
+ALGORITHM Merge(B[0..p − 1], C[0..q − 1], A[0..p + q − 1])
+//Merges two sorted arrays into one sorted array
+//Input: Arrays B[0..p − 1] and C[0..q − 1] both sorted
+//Output: Sorted array A[0..p + q − 1] of the elements of B and C
+i ←0; j ←0; k←0
+while i <p and j <q do
+if B[i]≤ C[j ]
+A[k]←B[i]; i ←i + 1
+else A[k]←C[j ]; j ←j + 1
+k←k + 1
+if i = p
+copy C[j..q − 1] to A[k..p + q − 1]
+else copy B[i..p − 1] to A[k..p + q − 1]
+
+
+
+
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/81366236/114271761-74be7280-99e9-11eb-9045-de41d7c31d41.png">

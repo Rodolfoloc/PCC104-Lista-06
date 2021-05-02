@@ -40,13 +40,11 @@ Algorthm _merge (A[0...n-1],l,m,r)_
 </p>
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/81366236/114271761-74be7280-99e9-11eb-9045-de41d7c31d41.png">
+  <img src="https://user-images.githubusercontent.com/81366236/116818820-a9829d00-ab43-11eb-98d1-8c85a75a05c1.png">
 </p>
 
-
-
 <p align="justify">
-2)	O algoritmo Johnson-Trotter gera cada permutação trocando apenas dois elementos adjacentes da sequência, da seguinte forma:
+3)	O algoritmo Johnson-Trotter gera cada permutação trocando apenas dois elementos adjacentes da sequência, da seguinte forma:
 </p>
 
 1.	Descobrir o maior número inteiro móvel na sequência. Um inteiro é considerado móvel se for maior que seu vizinho imediato na direção de referência.

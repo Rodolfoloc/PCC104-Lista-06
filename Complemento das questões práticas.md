@@ -47,9 +47,17 @@ Algorthm _merge (A[0...n-1],l,m,r)_
 3)	O Merge Sort é um algoritmo estável, pois caso existam elementos repetidos, ele coloca o elemento que aparece primeiro antes do elemento que aparece em seguida.
 </p>
 
+
 <p align="justify">
-4)	O 
+4)	
+
+a) Quando vários elementos do arranjo tiverem o maior valor a saída do método será o maior índice que contém o maior elemento, pois o algoritmo é estável.
 </p>
+
+<p align="justify">
+4)	
+
+b) Quando v
 
 <p align="justify">
 Condição base: O caso base para este problema será quando o valor de n = 0 ou 1.

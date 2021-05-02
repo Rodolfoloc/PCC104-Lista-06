@@ -72,9 +72,11 @@ a) Quando vários elementos do arranjo tiverem o maior valor a saída do método
 </p>
 
 <p align="justify">
-b) Relação de recorrência: G(n) = G(n/2) + 1  
-  Solução da recorrência utilizando o Wolfram Alpha: G(n) = log<sub>2</sub>n  
-  Portanto, crescimento logarítmico  
+b) Relação de recorrência: G(n) = G(n/2) + 1
+  
+  Solução da recorrência utilizando o Wolfram Alpha: G(n) = log<sub>2</sub>n
+  
+  Portanto, crescimento logarítmico
 </p>
 
 <p align="justify">
@@ -92,31 +94,21 @@ Algorthm _maxA (A[0...n-1],n)_
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**return** max 
 
 <p align="justify">
-  A operação básica é executada n - 2 vezes  
-  Solução: G(n) = n  
-  Portanto, crescimento linear   
-O algoritmo de divisão e conquista é  
+  A operação básica é executada n - 2 vezes
+  
+  Solução: G(n) = n
+  
+  Portanto, crescimento linear 
+  
+O algoritmo de divisão e conquista é aproximadamente 69% mais rápido que o de força bruta.  
  </p>
 
-
-
 <p align="justify">
-5)	A Binary Search pesquisa um array ordenado dividindo repetidamente o intervalo da pesquisa pela metade. Comece com um intervalo cobrindo todo o array. Se o valor da chave for menor que o item no meio do intervalo, restrinja o intervalo à metade inferior. Caso contrário, estreite-o para a metade superior. Verifique repetidamente até que o valor seja encontrado ou o intervalo esteja vazio. Exemplo :
+5)	A Bi
 </p>
 
-![Binary-Search](https://user-images.githubusercontent.com/81366236/114305989-c120b580-9ab0-11eb-9f6e-bb197739fc7c.png)
 
-Algorthm _BinarySearch(A[0..n − 1], K)_  
-// Input: Um array qualquer ordenado crescente e uma chave    
-// Output: Índice do array é igual a chave ou -1 se não houver tal elemento  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;l = 0  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;r = n − 1  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**while** l <= r **do**  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;m = (l + r) / 2  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** K = A[m] **return** m  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**else if** K < A[m] r = m − 1  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**else** l = m + 1  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**return** -1
+
 
 <p align="justify">
 6)	Interpolation Search é um aprimoramento da Binary Search. A Binary Search sempre vai para o elemento do meio para verificar. Por outro lado, a Interpolation Search pode ir para locais diferentes de acordo com o valor da chave que está sendo pesquisada. O algoritmo imita a maneira como procuramos por um nome em uma lista telefônica: se estivermos procurando por alguém chamado Brown, abrimos o livro não no meio, mas muito perto do início, ao contrário da nossa ação ao procurar alguém chamado, Smith. A posição é calculada da seginte forma:

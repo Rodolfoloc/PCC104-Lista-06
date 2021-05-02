@@ -12,9 +12,9 @@ Algorthm _mergeSort (A[0...n-1],l,r)_
 //Output: array ordenado crescente  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** l >= r **return**  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;m = l + (r - l) / 2  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mergeSort(v, l, m)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mergeSort(v, m + 1, r)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;merge(v, l, m, r)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mergeSort(A, l, m)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mergeSort(A, m + 1, r)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;merge(A, l, m, r)  
 
 Algorthm _merge (A[0...n-1],l,m,r)_  
 //Input: array qualquer e seus índices inicial, meio e final  
@@ -28,20 +28,15 @@ Algorthm _merge (A[0...n-1],l,m,r)_
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;k = l  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**while** i < n1 **and** j < n2  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** L[i] <= R[j]  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;v[k] = L[i]  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A[k] = L[i]  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i++  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**else**  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;v[k] = R[j]  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A[k] = R[j]  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;j++  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;k++  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**while** i < n1  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;v[k] = L[i]  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i++  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;k++  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;copy L to A[i...n1 - 1]    
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;copy R to A[0...n2 - 2] 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**while** j < n2  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;v[k] = R[j]  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;j++  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;k++  
 
 <p align="justify">
 2)	

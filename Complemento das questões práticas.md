@@ -36,7 +36,6 @@ Algorthm _merge (A[0...n-1],l,m,r)_
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;k++  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;copy L to A[i...n1 - 1]    
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;copy R to A[0...n2 - 2] 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**while** j < n2  
 
 <p align="justify">
 2)	

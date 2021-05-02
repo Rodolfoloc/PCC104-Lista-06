@@ -7,44 +7,45 @@ Complemento das questões práticas:
 1)	Merge Sort é um algoritmo de ordenação que divide o array de entrada em duas metades, chama a si mesmo para as duas metades e, em seguida, mescla as duas metades classificadas.
 </p>
 
-Algorthm _Insertion Sort (A[0...n-1])_  
-//Input: array qualquer  
+Algorthm _mergeSort (A[0...n-1],l,r)_  
+//Input: array qualquer e seus índices inicial e final  
 //Output: array ordenado crescente  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**for** i = 1 **to** n-1 **do**  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;v = A[i]  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;j = i - 1  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**while** j >= 0 **and** A[j] > v **do**  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A[j + 1] = A[j]  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;j = j - 1  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A[j + 1] = v
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** l >= r **return**  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;m = l + (r - l) / 2  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mergeSort(v, l, m)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mergeSort(v, m + 1, r)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;merge(v, l, m, r)  
 
-ALGORITHM Mergesort(A[0..n − 1])
-//Sorts array A[0..n − 1] by recursive mergesort
-//Input: An array A[0..n − 1] of orderable elements
-//Output: Array A[0..n − 1] sorted in nondecreasing order
-if n > 1
-copy A[0..n/2 − 1] to B[0..n/2 − 1]
-copy A[n/2..n − 1] to C[0..n/2 − 1]
-Mergesort(B[0..n/2 − 1])
-Mergesort(C[0..n/2 − 1])
-Merge(B, C, A) //see below
+Algorthm _merge (A[0...n-1],l,m,r)_  
+//Input: array qualquer e seus índices inicial, meio e final  
+//Output: subarray ordenado crescente  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;n1 = m - l + 1  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;n2 = r - m  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;copy A[0...m] to L   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;copy A[0...m + 1] to R   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i = 0   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;j = 0   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;k = l  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**while** i < n1 && j < n2  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** L[i] <= R[j]  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;v[k] = L[i]  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i++  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**else**  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;v[k] = R[j]  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;j++  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;k++  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**while** i < n1  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;v[k] = L[i]  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i++  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;k++  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**while** j < n2  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;v[k] = R[j]  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;j++  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;k++  
 
-ALGORITHM Merge(B[0..p − 1], C[0..q − 1], A[0..p + q − 1])
-//Merges two sorted arrays into one sorted array
-//Input: Arrays B[0..p − 1] and C[0..q − 1] both sorted
-//Output: Sorted array A[0..p + q − 1] of the elements of B and C
-i ←0; j ←0; k←0
-while i <p and j <q do
-if B[i]≤ C[j ]
-A[k]←B[i]; i ←i + 1
-else A[k]←C[j ]; j ←j + 1
-k←k + 1
-if i = p
-copy C[j..q − 1] to A[k..p + q − 1]
-else copy B[i..p − 1] to A[k..p + q − 1]
-
-
-
+<p align="justify">
+2)	
+</p>
 
 
 <p align="center">

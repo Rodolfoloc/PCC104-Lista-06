@@ -23,9 +23,7 @@ Algorthm _merge (A[0...n-1],l,m,r)_
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;n2 = r - m  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;copy A[0...m] to L   
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;copy A[0...m + 1] to R   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i = 0   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;j = 0   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;k = l  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i = 0; j = 0; k = l  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**while** i < n1 **and** j < n2  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** L[i] <= R[j]  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A[k] = L[i]  
@@ -35,7 +33,7 @@ Algorthm _merge (A[0...n-1],l,m,r)_
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;j++  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;k++  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;copy L to A[i...n1 - 1]    
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;copy R to A[0...n2 - 2] 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;copy R to A[j...n2 - 1] 
 
 <p align="justify">
 2)	

@@ -100,7 +100,7 @@ Algorthm _maxA (A[0...n-1],n)_
   
   Portanto, crescimento linear 
   
-O algoritmo de divisão e conquista é aproximadamente 69% mais rápido que o de força bruta.  
+O algoritmo de divisão e conquista é aproximadamente 0,69 vezes mais rápido que o de força bruta.  
  </p>
 
 <p align="justify">

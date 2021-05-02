@@ -44,46 +44,11 @@ Algorthm _merge (A[0...n-1],l,m,r)_
 </p>
 
 <p align="justify">
-3)	O algoritmo Johnson-Trotter gera cada permutação trocando apenas dois elementos adjacentes da sequência, da seguinte forma:
-</p>
-
-1.	Descobrir o maior número inteiro móvel na sequência. Um inteiro é considerado móvel se for maior que seu vizinho imediato na direção de referência.
-2.	Trocar o inteiro móvel e o inteiro adjacente da direção de referência.
-3.	Mudar a direção de todos os elementos cujo valor é maior do que o valor inteiro móvel.
-4.	Repitir o passo 1 até que não haja nenhum inteiro móvel restante na sequência.
-
-<p align="justify">
-Ex: Gerar permutações de tamanho 3.
-Imprimir 1 2 3. Inicialmente todas as direções estão da direita para a esquerda <1 <2 <3.
-
-Os números móveis são 2 e 3. O maior número móvel é 3, então troque 2 e 3. Se 3 é maior, não mudar nenhuma direção <1 <3 <2
-
-O maior número móvel é 3. Troque 1 e 3. <3 <1 <2
-
-O maior número móvel é 2. Troque 1 e 2 e mude a direção de elementos maiores. 3> <2 <1
-
-O maior número móvel é 2. Troque 2 e 3. <2 3> <1
-
-O maior número móvel é 1. Troque 1 e 3 e mude a direção de elementos maiores. 2> <1 3>
-
-O maior número móvel é 1. Troque 1 e 2. <1 2> 3>
-
-Algorthm _JohnsonTrotter(n)_  
-//Input: Um inteiro positivo qualquer  
-//Output: Uma lista de todas as suas permutações  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;inicializar a primeira permutação com <1 <2 ... <n  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**while** a última permutação tem um elemento móvel **do**  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Passo 1  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Passo 2  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Passo 3  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;adicione a nova permutação à lista  
-
-<p align="justify">
-3)	Imprime todas as permutações ordenadas de forma crescente (lexicográfica). Aplicando o Insertion sort a saída do algoritmo Johnson-Trotter, obtém-se uma solução para o Lexicographic Permute com o mesmo custo do livro O(n<sup>2</sup>xn!). Aplicando outros algoritmos de ordenação, seu custo pode ser otimizado para O(nxn!).
+3)	O Merge Sort é um algoritmo estável, pois caso existam elementos repetidos, ele coloca o elemento que aparece primeiro antes do elemento que aparece em seguida.
 </p>
 
 <p align="justify">
-4)	O Binary Reflected Gray Code utiliza uma abordagem recursiva para gerar o código Gray. O código de Gray é um sistema binário onde de um número para outro apenas um bit varia. A ideia é anexar recursivamente os bits 0 e 1 até que o número de bits não seja igual a n. 
+4)	O 
 </p>
 
 <p align="justify">

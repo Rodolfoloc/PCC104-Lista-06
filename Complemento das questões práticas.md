@@ -66,15 +66,31 @@ Algorthm _max (A[0...n-1],l,r)_
 //Output: o índice do maior elemento do subarray  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** v[l] > v[r] **return** l  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**else return** r  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;m = l + (r - l) / 2 
 
 <p align="justify">
 a) Quando vários elementos do arranjo tiverem o maior valor a saída do método será o maior índice que contém o maior elemento, pois o algoritmo é estável.
 </p>
 
 <p align="justify">
-b) Quando v
+b) Relação de recorrência: G(n) = G(n/2) + 1  
+   Solução da recorrência utilizando o Wolfram Alpha: G(n) = log n  
+   Portanto, crescimento logarítmico  
 </p>
+
+<p align="justify">
+c)  
+</p>
+
+Algorthm _maxA (A[0...n-1],n)_  
+//Input: array qualquer e seu tamanho  
+//Output: o índice do maior elemento do array  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** n = 1 **return** 0  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** A[0] > A[1] max = 0  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**else** max = 1  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**for** i = 2 **to** n - 1 **do**  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** A[i] >= A[max] max = i  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**return** max 
+
 
 
 

@@ -47,36 +47,36 @@ Algorthm _merge (A[0...n-1],l,m,r)_
 3)	O Merge Sort é um algoritmo estável, pois caso existam elementos repetidos, ele coloca o elemento que aparece primeiro antes do elemento que aparece em seguida.
 </p>
 
-
 <p align="justify">
 4)	
+</p>
 
+Algorthm _mergemax (A[0...n-1],l,r)_  
+//Input: array qualquer e seus índices inicial e final  
+//Output: o índice do maior elemento do array  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** l < r  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;m = l + (r - l) / 2  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;maxLeft = mergemax(v, l, m)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;maxRight = mergemax(v, m + 1, r)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**return** max(v, maxLeft, maxRight)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**return** max(v, l, r);  
+
+Algorthm _max (A[0...n-1],l,r)_  
+//Input: array qualquer e seus índices inicial e final  
+//Output: o índice do maior elemento do subarray  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** v[l] > v[r] **return** l  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**else return** r  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;m = l + (r - l) / 2 
+
+<p align="justify">
 a) Quando vários elementos do arranjo tiverem o maior valor a saída do método será o maior índice que contém o maior elemento, pois o algoritmo é estável.
 </p>
 
 <p align="justify">
-4)	
-
 b) Quando v
-
-<p align="justify">
-Condição base: O caso base para este problema será quando o valor de n = 0 ou 1.
 </p>
 
-<p align="justify">
-Condição recursiva: Para qualquer valor maior que 1, gere recursivamente os códigos Gray dos n - 1 bits e, em seguida, para cada um dos códigos Gray gerados, adicione o prefixo 0 e 1.
-</p>
 
-Algorthm _BRGC(n)_  
-//Input: Um inteiro positivo qualquer  
-//Output: Uma lista de todas as cadeias de bits de comprimento n compondo o código Gray  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** n = 1 faça a lista L contendo cadeias de bits 0 e 1 nesta ordem  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**else** gere a lista L1 de sequências de bits de tamanho n - 1 chamando BRGC (n - 1)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;copie a lista L1 para a lista L2 na ordem inversa  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;adicione 0 na frente de cada string de bits na lista L1  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;adicione 1 na frente de cada string de bits na lista L2  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;anexe L2 a L1 para obter a lista L  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**return** L
 
 <p align="justify">
 5)	A Binary Search pesquisa um array ordenado dividindo repetidamente o intervalo da pesquisa pela metade. Comece com um intervalo cobrindo todo o array. Se o valor da chave for menor que o item no meio do intervalo, restrinja o intervalo à metade inferior. Caso contrário, estreite-o para a metade superior. Verifique repetidamente até que o valor seja encontrado ou o intervalo esteja vazio. Exemplo :

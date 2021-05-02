@@ -26,7 +26,7 @@ Algorthm _merge (A[0...n-1],l,m,r)_
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i = 0   
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;j = 0   
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;k = l  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**while** i < n1 && j < n2  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**while** i < n1 **and** j < n2  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** L[i] <= R[j]  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;v[k] = L[i]  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i++  

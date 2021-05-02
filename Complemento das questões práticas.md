@@ -39,10 +39,11 @@ Algorthm _merge (A[0...n-1],l,m,r)_
 2)	
 </p>
 
-
 <p align="center">
   <img src="https://user-images.githubusercontent.com/81366236/114271761-74be7280-99e9-11eb-9045-de41d7c31d41.png">
 </p>
+
+
 
 <p align="justify">
 2)	O algoritmo Johnson-Trotter gera cada permutação trocando apenas dois elementos adjacentes da sequência, da seguinte forma:

@@ -161,28 +161,40 @@ O algoritmo de divisão e conquista tem o mesmo comportamento assintótico que o
  </p>
 
 <p align="justify">
-6)	In
+6)	
 </p>
 
-<p align="center">
-  <img src="https://latex.codecogs.com/svg.latex?\Large&space;pos=l+\frac{(x-arr[l])(r-l)}{arr[r]-arr[l]}">
-</p>
+Algorthm _partition (A[0...n-1],l,r,i,j)_  
+//Input: array qualquer, seus índices inicial e final, índices dos sub-arranjos após a partição  
+//Output: parte do array ordenado  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i = l  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;j = r  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pivot = A[(i + j) / 2]  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**do**   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**while** pivot > A[i] ++i  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**while** pivot < A[j] --j  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** i <= j  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;temp = A[i]  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A[i] = A[j]  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A[j] = temp  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;++i  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--j  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**while** i <= j  
+
+Algorthm _quicksort (A[0...n-1],l,r)_  
+//Input: array qualquer e seus índices inicial e final
+//Output: array ordenado  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i = 0  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;j = 0  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;partition(A, l, r, i, j)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** l < j quicksort(A, l, j)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** i < r quicksort(A, i, r)  
 
 <p align="justify">
-7)	Fake Coin Problem: Existem n moedas idênticas. Uma moeda é falsa e pesa menos do que as moedas reais. A única maneira de comparar moedas é uma balança. Utilizando a Recursive Binary Search: 
+7)	 
 </p>
 
-Algorthm _RecursiveBinarySearch(A[0..n − 1], l, r, K)_  
-// Input: Um array qualquer contendo um número para moedas verdadeiras e um número menor para a moeda falsa, a menor e a maior posição do vetor, o número que representa a moeda falsa  
-// Output: Índice do array que contém a moda falsa ou -1 se não houver moeda falsa  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;l = 0  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;r = n − 1  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** (r >= l)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;m = (l + r) / 2  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** K = A[m] **return** m  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** sum(r) > sum(l) **return** RecursiveBinarySearch(A[0..n − 1], l, m - 1, K)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**return** RecursiveBinarySearch(A[0..n − 1], l, m + 1, K)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**return** -1
+
 
 <p align="justify">
 8)	Este algoritmo funciona em duas etapas. A etapa de particionamento escolhe um elemento pivô e, em seguida, reorganiza os elementos da matriz de modo que tudo o que for menor que o pivô fique a esquerda; tudo que for maior que o pivô fique a direita; e o pivô esteja no lugar correto. Para encontrar medianas, basicamente, deve-se chamar recursivamente a função de partição, até que o pivô alcance a posição N / 2. Obs: Usando o algoritmo de seleção, é possível encontrar qualquer K-ésimo menor elemento.

@@ -104,9 +104,31 @@ O algoritmo de divisão e conquista é aproximadamente 0,69 vezes mais rápido q
  </p>
 
 <p align="justify">
-5)	A Bi
+5)	
 </p>
 
+Algorthm _mergemaxmin (A[0...n-1],l,r,min,max)_  
+//Input: array qualquer, seus índices inicial e final, menor e maior elemento do dado   
+//Output: valor mínimo e máximo do array  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** l = r  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** max < A[l] max = A[l]  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** min > A[r]) min = A[r]  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**return**  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** r - l = 1  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** A[l] < A[r])  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** min > A[l]) min = A[l]  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** max < A[r]) max = A[r]  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**else**   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** min > A[r]) min = A[r]  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** max < A[l]) max = A[l]  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**return**  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;m = l + (r - l) / 2  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mergemaxmin(A, l, m, min, max)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mergemaxmin(A, m + 1, r, min, max)  
+
+<p align="justify">
+a) Quando
+</p>
 
 
 

@@ -157,7 +157,7 @@ Algorthm _minmax (A[0...n-1],n,min,max)_
   
   Portanto, crescimento linear 
   
-O algoritmo de divisão e conquista tem o mesmo comportamento assintótico.  
+O algoritmo de divisão e conquista tem o mesmo comportamento assintótico que o de força bruta.  
  </p>
 
 <p align="justify">

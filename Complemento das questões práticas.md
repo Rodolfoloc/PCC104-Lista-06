@@ -127,13 +127,41 @@ Algorthm _mergemaxmin (A[0...n-1],l,r,min,max)_
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mergemaxmin(A, m + 1, r, min, max)  
 
 <p align="justify">
-a) Quando
+a) Relação de recorrência: G(n) = G(n/2) + n - 2
+  
+  Solução da recorrência utilizando o Wolfram Alpha: G(n) = 2n
+  
+  Portanto, crescimento linear
 </p>
 
+<p align="justify">
+b)  
+</p>
 
+Algorthm _minmax (A[0...n-1],n,min,max)_  
+//Input: array qualquer, seu tamanho, menor e maior elemento do dado     
+//Output: o índice do menor e do maior elemento do array  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** n = 1   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;max = A[0]  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;min = A[0]  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**return** minmax  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**for** i = 0 **to** n - 1 **do**  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** A[i] > max max = A[i]  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**else** A[i] < min min = A[i]  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**return** minmax 
+    
+<p align="justify">
+  A operação básica é executada n - 1 vezes
+  
+  Solução: G(n) = n
+  
+  Portanto, crescimento linear 
+  
+O algoritmo de divisão e conquista tem o mesmo comportamento assintótico.  
+ </p>
 
 <p align="justify">
-6)	Interpolation Search é um aprimoramento da Binary Search. A Binary Search sempre vai para o elemento do meio para verificar. Por outro lado, a Interpolation Search pode ir para locais diferentes de acordo com o valor da chave que está sendo pesquisada. O algoritmo imita a maneira como procuramos por um nome em uma lista telefônica: se estivermos procurando por alguém chamado Brown, abrimos o livro não no meio, mas muito perto do início, ao contrário da nossa ação ao procurar alguém chamado, Smith. A posição é calculada da seginte forma:
+6)	In
 </p>
 
 <p align="center">

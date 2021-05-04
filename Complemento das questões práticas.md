@@ -68,7 +68,7 @@ Algorthm _max (A[0...n-1],l,r)_
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**else return** r  
 
 <p align="justify">
-a) Quando vários elementos do arranjo tiverem o maior valor a saída do método será o maior índice que contém o maior elemento, pois o algoritmo é estável.
+a) Em um algoritmo estável, quando vários elementos do arranjo tiverem o mesmo valor, a saída do método deve ter em seu menor índice o primeiro elemento que aparece (considerando o intervalo de elementos iguais), e assim em diante até o fim do intervalo.
 </p>
 
 <p align="justify">
@@ -206,28 +206,8 @@ Algorthm _quicksort (A[0...n-1],l,r)_
 </p>
 
 <p align="justify">
-8)	Este
+8)	O exemplo da questão anterior mostra que o quick sort não é estável, pois na segunda chamada do método ele troca o primeiro 'E' com o 'A', colocando-o na terceira posição. Desta forma, o primeiro 'E' que aparece ocupa a segunda posição do intervalo, mostrando assim que não é um algoritmo estável.
 </p>
-
-Algorthm _LomutoPartition(A[0..n − 1], l, r)_  
-// Input: Um array qualquer ou um subarray do array  
-// Output: A nova posição do pivô  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p = A[l]  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;s = l  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**for** i = l + 1 **to** r **do**  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** A[i] < p  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;s = s + 1  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;swap(A[s], A[i])  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;swap(A[l], A[s])  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**return** s  
-
-Algorthm _Quickselect(A[0..n − 1], l, r, k)_  
-// Input: Um array qualquer e uma posição do array  
-// Output: O valor do k-ésimo menor elemento do array  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;s = LomutoPartition(A, l, r)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** s = k - 1 **return** A[s]  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**else if** s < k quickselect(A, s + 1, r, k)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**else** quickselect(A, l, s - 1, k)
 
 <p align="justify">
 9)	Uma árvore de pesquisa binária (BST) é definida como uma árvore binária baseada em nós que possui as seguintes propriedades:  

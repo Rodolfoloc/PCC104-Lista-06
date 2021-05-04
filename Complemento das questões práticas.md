@@ -161,7 +161,16 @@ O algoritmo de divisão e conquista tem o mesmo comportamento assintótico que o
  </p>
 
 <p align="justify">
-6)	
+6)	O quick sort seleciona um elemento como pivô e particiona o array fornecido ao redor do pivô selecionado. Existem muitas versões diferentes do quickSort que selecionam o pivô de maneiras diferentes:
+</p>
+
+* Primeiro elemento como pivô.
+* Último elemento como pivô
+* Elemento aleatório como pivô.
+* Mediana como pivô (Implementado).
+
+<p align="justify">
+O principal processo no quickSort é a partição. O objetivo das partições é, dado um array e um pivô x, colocar x em sua posição correta na matriz classificada de forma que todos os elementos menores que x fiquem a esquerda e todos os elementos maiores que x fiquem a direita.
 </p>
 
 Algorthm _partition (A[0...n-1],l,r,i,j)_  
@@ -191,13 +200,15 @@ Algorthm _quicksort (A[0...n-1],l,r)_
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** i < r quicksort(A, i, r)  
 
 <p align="justify">
-7)	 
+7)	O algoritmo partition desloca o índice i até encontrar o primeiro elemento A[i] maior ou igual ao pivô e o índice j até encontrar o primeiro elemento A[j] menor ou igual ao pivô. Troca-se a[i] com a[j] enquanto os índices i e j não se cruzarem. As indicações P1 e P2 indicam essas trocas:
 </p>
 
-
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/81366236/117058520-18532800-acf5-11eb-98b7-96c3b9d87c7d.png">
+</p>
 
 <p align="justify">
-8)	Este algoritmo funciona em duas etapas. A etapa de particionamento escolhe um elemento pivô e, em seguida, reorganiza os elementos da matriz de modo que tudo o que for menor que o pivô fique a esquerda; tudo que for maior que o pivô fique a direita; e o pivô esteja no lugar correto. Para encontrar medianas, basicamente, deve-se chamar recursivamente a função de partição, até que o pivô alcance a posição N / 2. Obs: Usando o algoritmo de seleção, é possível encontrar qualquer K-ésimo menor elemento.
+8)	Este
 </p>
 
 Algorthm _LomutoPartition(A[0..n − 1], l, r)_  

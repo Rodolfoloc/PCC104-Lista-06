@@ -187,8 +187,8 @@ Algorthm _quicksort (A[0...n-1],l,r)_
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i = 0  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;j = 0  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;partition(A, l, r, i, j)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** l < j quicksort(A, l, j)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** i < r quicksort(A, i, r)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** l < j quicksort(A, l, j)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** i < r quicksort(A, i, r)  
 
 <p align="justify">
 7)	 

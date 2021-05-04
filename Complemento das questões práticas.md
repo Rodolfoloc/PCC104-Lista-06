@@ -56,15 +56,15 @@ Algorthm _mergemax (A[0...n-1],l,r)_
 //Output: o índice do maior elemento do array  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** l < r  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;m = l + (r - l) / 2  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;maxLeft = mergemax(v, l, m)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;maxRight = mergemax(v, m + 1, r)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**return** max(v, maxLeft, maxRight)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**return** max(v, l, r);  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;maxLeft = mergemax(A, l, m)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;maxRight = mergemax(A, m + 1, r)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**return** max(A, maxLeft, maxRight)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**return** max(A, l, r);  
 
 Algorthm _max (A[0...n-1],l,r)_  
 //Input: array qualquer e seus índices inicial e final  
 //Output: o índice do maior elemento do subarray  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** v[l] > v[r] **return** l  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** A[l] > A[r] **return** l  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**else return** r  
 
 <p align="justify">

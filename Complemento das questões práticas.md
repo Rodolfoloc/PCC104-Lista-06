@@ -271,5 +271,6 @@ Algorthm _Postorder (node)_
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(node)  
 
 <p align="justify">
-13)	 
+13)	 O método de Strassen divide matrizes em submatrizes de tamanho N/2 x N/2, as quatro submatrizes calculadas usando as seguintes fórmulas:
 </p>
+

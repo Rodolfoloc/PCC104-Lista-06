@@ -274,3 +274,30 @@ Algorthm _Postorder (node)_
 13)	 O método de Strassen divide matrizes em submatrizes de tamanho N/2 x N/2, as quatro submatrizes calculadas usando as seguintes fórmulas:
 </p>
 
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/81366236/117191901-7cd6bb80-adb7-11eb-864b-b226253b6e51.png">
+</p>
+
++ A, B e C são matrizes quadradas de tamanho N x N.
++ a, b, c e d são submatrizes de A com tamanho N/2 x N/2.
++ e, f, g e h são submatrizes de B com tamanho N/2 x N/2.
++ p1, p2, p3, p4, p5, p6 e p7 são submatrizes com tamanho N/2 x N/2.
+
+Algorthm _Strassen (A[0...n-1], B[0...n-1])_  
+//Input: Dois arrays quaisquer de mesmo tamanho  
+//Output: AxB  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** n = 1 **return** AxB  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**else** Compute a, e, b, f, c, g, d e h (m = n/2)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;P1 = Strassen(A11, B12 − B22)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;P2 = Strassen(A11 + A12, B22)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;P3 = Strassen(A21 + A22, B11)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;P4 = Strassen(A22, B21 − B11)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;P5 = Strassen(A11 + A22, B11 + B22)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;P6 = Strassen(A12 − A22, B21 + B22)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;P7 = Strassen(A11 − A21, B11 + B12)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;C11 = P5 + P4 − P2 + P6  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;C12 = P1 + P2  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;C21 = P3 + P4  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;C22 = P1 + P5 − P3 − P7  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**return** C
+

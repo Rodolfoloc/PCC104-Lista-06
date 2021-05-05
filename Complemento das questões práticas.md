@@ -234,8 +234,16 @@ Algorthm _Height (T)_
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** T = NULL **return** -1  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**else return** max{Height(T<sub>left</sub>), Height(T<sub>right</sub>)} + 1  
 
+<p align="justify">
+11)	 
+</p>
 
-Para pesquisar um número, começar pela raiz, comparar o valor a ser pesquisado com o valor da raiz. Se for igual termine a pesquisa. Se for menor, ir para a subárvore esquerda, caso contrário ir para a subárvore direita. Portanto, pesquisar um elemento na árvore é basicamente um percurso em que a cada passo deve-se ir para a esquerda ou para a direita. A cada passo uma das subárvores é descartada até que o espaço de busca seja reduzido a apenas um nó.
++ No percurso preorder, a raiz é visitada antes que as subárvores esquerda e direita sejam visitadas (nessa ordem): a, b, d, e, c, f.
++ No percurso inorder, a raiz é visitada depois de visitar sua subárvore esquerda, mas antes de visitar a subárvore direita: d, e, b, a, f, c.
++ No percurso postorder, a raiz é visitada depois de visitar as subárvores esquerda e direita (nessa ordem): d, e, b, f, c, a.
+
+<p align="justify">
+12)	 
 </p>
 
 Algorthm _Search Tree (root, key)_  

@@ -239,16 +239,37 @@ Algorthm _Height (T)_
 </p>
 
 + No percurso preorder, a raiz é visitada antes que as subárvores esquerda e direita sejam visitadas (nessa ordem): a, b, d, e, c, f.
-+ No percurso inorder, a raiz é visitada depois de visitar sua subárvore esquerda, mas antes de visitar a subárvore direita: d, e, b, a, f, c.
++ No percurso inorder, a raiz é visitada depois de visitar sua subárvore esquerda, mas antes de visitar a subárvore direita: d, b, e, a, c, f.
 + No percurso postorder, a raiz é visitada depois de visitar as subárvores esquerda e direita (nessa ordem): d, e, b, f, c, a.
 
 <p align="justify">
 12)	 
 </p>
 
-Algorthm _Search Tree (root, key)_  
-//Input: O nó raiz e um valor qualquer a ser pesquisado  
-//Output: O nó contendo o valor pesquisado ou NULL se o valor não foi encontrado  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** root = NULL **or** root.data = key **return** root  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** root.data < key  **return** Search Tree (root.right, key)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**return** Search(root.left, key)  
+Algorthm _Preorder (node)_  
+//Imprime o caminho de nós visitados  
+//Input: O nó raiz  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** root = NULL **return**  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(node)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Preorder(left)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Preorder(right)  
+
+Algorthm _Inorder (node)_  
+//Imprime o caminho de nós visitados  
+//Input: O nó raiz  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** root = NULL **return**  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Inorder(left)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(node)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Inorder(right)  
+
+Algorthm _Postorder (node)_  
+//Imprime o caminho de nós visitados  
+//Input: O nó raiz  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** root = NULL **return**  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Preorder(left)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Preorder(right)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(node)  
+
+<p align="justify">
+13)	 
+</p>

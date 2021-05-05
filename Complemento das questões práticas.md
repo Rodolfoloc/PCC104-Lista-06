@@ -210,18 +210,26 @@ Algorthm _quicksort (A[0...n-1],l,r)_
 </p>
 
 <p align="justify">
-9)	Uma árvore de pesquisa binária (BST) é definida como uma árvore binária baseada em nós que possui as seguintes propriedades:  
+9)	Uma árvore binária onde cada nó tem no máximo dois filhos. Possui as seguintes propriedades:  
 </p>
 
-+ A subárvore esquerda de um nó contém apenas nós com valores menores que o valor do nó;
-+ A subárvore direita de um nó contém apenas nós com valores maiores que o valor do nó.
-+ As subárvores esquerda e direita também devem ser árvore de pesquisa binária. 
-+ Não deve haver nós duplicados.
++ O número máximo de nós no nível l de uma árvore binária é 2<sup>l</sup>. 
++ O número máximo de nós em uma árvore binária de altura h é 2<sup>h</sup> - 1. 
++ Em uma árvore binária com N nós, a altura mínima possível ou o número mínimo de níveis é log<sub>2</sub> (N + 1).   
++ Uma árvore binária com folhas L tem pelo menos |log<sub>2</sub>L| + 1 níveis. 
++ Na árvore binária onde cada nó tem 0 ou 2 filhos, o número de nós folha é sempre um a mais do que nós com dois filhos.
 
 Estrutura da árvore:
 <p align="center">
   <img src="https://user-images.githubusercontent.com/81366236/114926019-37514f00-9e06-11eb-81e4-60607d89c2aa.png">
 </p>
+
+<p align="justify">
+10)	Uma   
+</p>
+
+
+
 
 <p align="justify">
 Inserir um valor

@@ -305,3 +305,20 @@ Algorthm _Strassen (A[0...n-1], B[0...n-1])_
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;C22 = P1 + P5 − P3 − P7  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**return** C
 
+<p align="justify">
+Soma: O(n)
+
+Subtração: O(n)
+
+Insert: O(n)
+
+Erase: O(n) 
+
+Juntar: O(n<sup>3</sup>)
+
+Relação de recorrência: G(n) = 7G(n/2) + n<sup>3</sup>
+  
+Solução da recorrência utilizando o Wolfram Alpha: G(n) = 8n<sup>3</sup>
+
+Portanto, crescimento cúbico
+</p>

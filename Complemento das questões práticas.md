@@ -306,9 +306,9 @@ Algorthm _Strassen (A[0...n-1], B[0...n-1])_
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**return** C
 
 <p align="justify">
-Soma: O(n)
+Soma: O(n<sup>2</sup>)
 
-Subtração: O(n)
+Subtração: O(n<sup>2</sup>)
 
 Insert: O(n)
 

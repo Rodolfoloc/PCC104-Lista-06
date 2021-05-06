@@ -322,3 +322,26 @@ Solução da recorrência utilizando o Wolfram Alpha: G(n) = 8n<sup>3</sup>
 
 Portanto, crescimento cúbico
 </p>
+
+Algorthm _matrixmul (A[0...n-1], B[0...n-1])_  
+//Input: Dois arrays quaisquer  
+//Output: AxB  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**for** i = 0 **to** n - 1 **do**  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**for** j = 0 **to** n - 1 **do**  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**for** k = 0 **to** n - 1 **do**  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;C[i][j] += A[i][k]*B[k][j]  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**return** C
+
+<p align="justify">
+  A operação básica é executada n - 1 entre 3 laços de repetição
+  
+  Solução: G(n) = nn<sup>3</sup>
+  
+  Portanto, crescimento cúbico 
+  
+O algoritmo de divisão e conquista tem o mesmo comportamento assintótico que o de força bruta. Se for possível otimizar a etapa de juntar da divisão e conquista, pode ocorrer redução do crescimento.  
+ </p>
+
+<p align="justify">
+14)	 O método
+</p>

@@ -335,7 +335,7 @@ Algorthm _matrixmul (A[0...n-1], B[0...n-1])_
 <p align="justify">
   A operação básica é executada n - 1 entre 3 laços de repetição
   
-  Solução: G(n) = nn<sup>3</sup>
+  Solução: G(n) = n<sup>3</sup>
   
   Portanto, crescimento cúbico 
   

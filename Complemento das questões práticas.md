@@ -283,6 +283,10 @@ Algorthm _Postorder (node)_
 + e, f, g e h são submatrizes de B com tamanho N/2 x N/2.
 + p1, p2, p3, p4, p5, p6 e p7 são submatrizes com tamanho N/2 x N/2.
 
+<p align="justify">
+Se A e B são duas matrizes N x N, N deve ser uma potência de 2. Se N não for uma potência de 2, as matrizes devem ser preenchidas com linhas e colunas de 0.
+</p>
+
 Algorthm _Strassen (A[0...n-1], B[0...n-1])_  
 //Input: Dois arrays quaisquer de mesmo tamanho  
 //Output: AxB  

@@ -367,12 +367,7 @@ Solução da recorrência utilizando o Wolfram Alpha: G(n) = nlog<sub>2</sub>n
 
 Portanto, crescimento linear logarítmico.
 
-Da lista 2:
-A operação básica é executada n - 1 entre 3 laços de repetição
+Da lista 2: Força bruta tem crescimento cúbico.
   
-  Solução: G(n) = n<sup>3</sup>
-  
-  Portanto, crescimento cúbico 
-  
-O algoritmo de divisão e conquista tem o mesmo comportamento assintótico que o de força bruta. Se for possível otimizar a etapa de juntar da divisão e conquista, pode ocorrer redução do crescimento. 
+O algoritmo de divisão e conquista fica 10<sup>2</sup> vezes mais rápido que o de força bruta para cada vez que uma entrada de 10 elementos é multiplicada por 10.  
 </p>

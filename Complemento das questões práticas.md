@@ -343,5 +343,36 @@ O algoritmo de divisão e conquista tem o mesmo comportamento assintótico que o
  </p>
 
 <p align="justify">
-14)	 O método
+14)	 O algoritmo QuickHull é semelhante ao Quick Sort. Seja poin[0 … n-1] o array de pontos de entrada. As etapas para encontrar o Convex Hull desses pontos são:
+
+1 - Encontre o ponto com a coordenada x mínimo (min_x), da mesma forma o ponto com a coordenada x máximo (max_x).
+
+2 - Faça uma linha que une estes dois pontos (L). Esta linha dividirá todo o conjunto em duas partes. Pegue as duas partes uma por uma e prossiga.
+
+3 - Para uma parte, encontre o ponto P com distância máxima da linha L. P forma um triângulo com os pontos min_x e max_x. Os pontos que estiverem dentro desse triângulo não fazem parte do Convex Hull.
+
+4 - A etapa acima divide o problema em dois subproblemas (resolvidos recursivamente). Agora a linha que une os pontos P e min_x e a linha que une os pontos P e max_x são novas linhas e os pontos que estáo fora do triângulo formam um conjunto pontos. Repita o passo 3 até que não haja mais nenhum ponto a esquerda da linha. Adicione os pontos finais deste passo ao Convex Hull.
+
+lineDist: O(1)
+
+findSide: O(1)
+
+set.insert: O(constante amortizada)
+
+quickHull: O(n) 
+
+Relação de recorrência: G(n) = 2G(n/2) + n
+  
+Solução da recorrência utilizando o Wolfram Alpha: G(n) = nlog<sub>2</sub>n
+
+Portanto, crescimento linear logarítmico.
+
+Da lista 2:
+A operação básica é executada n - 1 entre 3 laços de repetição
+  
+  Solução: G(n) = n<sup>3</sup>
+  
+  Portanto, crescimento cúbico 
+  
+O algoritmo de divisão e conquista tem o mesmo comportamento assintótico que o de força bruta. Se for possível otimizar a etapa de juntar da divisão e conquista, pode ocorrer redução do crescimento. 
 </p>

@@ -36,6 +36,14 @@ Algorthm _merge (A[0...n-1],l,m,r)_
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;copy R to A[j...n2 - 1] 
 
 <p align="justify">
+Relação de recorrência: G(n) = 2G(n/2) + 1
+
+Solução da recorrência utilizando o Wolfram Alpha: G(n) = nlog<sub>2</sub>n
+  
+Portanto, crescimento logarítmico linear
+</p>
+
+<p align="justify">
 2)	
 </p>
 
@@ -198,6 +206,14 @@ Algorthm _quicksort (A[0...n-1],l,r)_
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** i < r quicksort(A, i, r)  
 
 <p align="justify">
+Relação de recorrência: G(n) = 2G(n/2) + n
+
+Solução da recorrência utilizando o Wolfram Alpha: G(n) = nlog<sub>2</sub>n
+  
+Portanto, crescimento logarítmico linear
+</p>
+
+<p align="justify">
 7)	O algoritmo partition desloca o índice i até encontrar o primeiro elemento A[i] maior ou igual ao pivô e o índice j até encontrar o primeiro elemento A[j] menor ou igual ao pivô. Troca-se a[i] com a[j] enquanto os índices i e j não se cruzarem. As indicações P1 e P2 indicam essas trocas:
 </p>
 
@@ -235,6 +251,14 @@ Algorthm _Height (T)_
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**else return** max{Height(T<sub>left</sub>), Height(T<sub>right</sub>)} + 1  
 
 <p align="justify">
+Relação de recorrência: G(n) = 2G(n/2) + 1
+
+Solução da recorrência utilizando o Wolfram Alpha: G(n) = n
+  
+Portanto, crescimento linear
+</p>
+
+<p align="justify">
 11)	 
 </p>
 
@@ -269,6 +293,15 @@ Algorthm _Postorder (node)_
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Preorder(left)  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Preorder(right)  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(node)  
+
+<p align="justify">
+Relação de recorrência: G(n) = 2G(n/2) + 1
+
+Solução da recorrência utilizando o Wolfram Alpha: G(n) = n
+  
+Portanto, crescimento linear
+</p>
+
 
 <p align="justify">
 13)	 O método de Strassen divide matrizes em submatrizes de tamanho N/2 x N/2, as quatro submatrizes calculadas usando as seguintes fórmulas:

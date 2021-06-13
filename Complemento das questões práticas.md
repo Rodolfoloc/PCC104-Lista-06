@@ -3,56 +3,40 @@
 
 Complemento das questões práticas:
 
+**1. Programação Dinâmica**
 <p align="justify">
-1)	Merge Sort é um algoritmo de ordenação que divide o array de entrada em duas metades, chama a si mesmo para as duas metades e, em seguida, mescla as duas metades classificadas.
+a)	A programação dinâmica é um método que busca encontrar a solução de vários subproblemas para, então, encontrar a solução do problema geral. A grande diferença dessa metodologia é que os subresultados são armazenados em memória já que eles são utilizados em diversos momentos durante o processamento da solução. Essa técnica serve para problemas com:
 </p>
 
-Algorthm _mergeSort (A[0...n-1],l,r)_  
-//Input: array qualquer e seus índices inicial e final  
-//Output: array ordenado crescente  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** l >= r **return**  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;m = l + (r - l) / 2  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mergeSort(A, l, m)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mergeSort(A, m + 1, r)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;merge(A, l, m, r)  
-
-Algorthm _merge (A[0...n-1],l,m,r)_  
-//Input: array qualquer e seus índices inicial, meio e final  
-//Output: subarray ordenado crescente  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;n1 = m - l + 1  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;n2 = r - m  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;copy A[0...m] to L   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;copy A[0...m + 1] to R   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i = 0; j = 0; k = l  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**while** i < n1 **and** j < n2  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** L[i] <= R[j]  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A[k] = L[i]  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i++  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**else**  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A[k] = R[j]  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;j++  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;k++  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;copy L to A[i...n1 - 1]    
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;copy R to A[j...n2 - 1] 
-
-<p align="justify">
-Relação de recorrência: G(n) = 2G(n/2) + 1
-
-Solução da recorrência utilizando o Wolfram Alpha: G(n) = nlog<sub>2</sub>n
+* Subestrutura ótima - a solução ótima do problema provém das soluções de subproblemas dependentes.
+* Sobreposição de soluções - a solução ótima passa pela resolução de subproblemas que aparecem duas ou mais vezes.
   
-Portanto, crescimento logarítmico linear
+<p align="justify">
+b)	
 </p>
+
+Algorthm _Fibonacci (n)_  
+//Input: n-ésimo número de Fibonacci  
+//Output: seu valor  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** n == 0 || n == 1 **return** n  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**return** Fib(n - 1) + Fib(n - 2)  
 
 <p align="justify">
-2)	
+c)	
 </p>
 
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/81366236/116818820-a9829d00-ab43-11eb-98d1-8c85a75a05c1.png">
-</p>
+Algorthm _Fibonacci (n)_  
+//Input: n-ésimo número de Fibonacci  
+//Output: seu valor  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;f[n + 1]  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;f[0] = 0  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;f[1] = 1  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**for** i = 2 **to** i <= n **do**  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;f[n] = Fib(n - 1) + Fib(n - 2)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**return** f[n] 
 
 <p align="justify">
-3)	O Merge Sort é um algoritmo estável, pois caso existam elementos repetidos, ele coloca o elemento que aparece primeiro antes do elemento que aparece em seguida.
+d)	
 </p>
 
 <p align="justify">

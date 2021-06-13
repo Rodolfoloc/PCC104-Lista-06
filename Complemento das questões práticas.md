@@ -28,7 +28,7 @@ c)
 Algorthm _Fibonacci (n)_  
 //Input: n-ésimo número de Fibonacci  
 //Output: seu valor  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;f[n + 1]  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;f[n + 2]  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;f[0] = 0  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;f[1] = 1  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**for** i = 2 **to** i <= n **do**  

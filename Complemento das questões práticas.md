@@ -18,22 +18,20 @@ b)
 Algorthm _Fibonacci (n)_  
 //Input: n-ésimo número de Fibonacci  
 //Output: seu valor  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** n == 0 || n == 1 **return** n  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**return** Fib(n - 1) + Fib(n - 2)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** n <= 1 **return** n  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**return** Fibonacci(n - 1) + Fibonacci(n - 2)  
 
 <p align="justify">
 c)	
 </p>
 
-Algorthm _Fibonacci (n)_  
-//Input: n-ésimo número de Fibonacci  
+Algorthm _Fibonacci (n, mem)_  
+//Input: n-ésimo número de Fibonacci e um array de mémoria
 //Output: seu valor  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;f[n + 2]  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;f[0] = 0  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;f[1] = 1  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**for** i = 2 **to** i <= n **do**  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;f[n] = Fib(n - 1) + Fib(n - 2)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**return** f[n] 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** mem[n] != -1 **return** mem[n]  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**else if** n <= 1 mem[n] = n  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**else** mem[n] = Fibonacci(n - 1, mem) + Fibonacci(n - 2, mem)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**return** mem[n]  
 
 <p align="justify">
 d)	

@@ -36,7 +36,7 @@ Algorthm _Fibonacci (n, mem[1..n])_
 <p align="justify">
 d)	Dado um valor V, se quisermos fazer a mudança para V centavos, e tivermos um suprimento infinito de moedas com valor C = {C1, C2, .., Cn}, qual é o número mínimo de moedas para fazer a mudança? Se não for possível fazer alterações, imprima -1. Exemplo:  
 
-Entrada: moedas [] = {25, 10, 5}, V = 30
+Entrada: moedas [ ] = {25, 10, 5}, V = 30
 
 Saída: Mínimo 2 moedas necessárias
   

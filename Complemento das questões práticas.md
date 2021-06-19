@@ -25,7 +25,7 @@ Algorthm _Fibonacci (n)_
 c)	
 </p>
 
-Algorthm _Fibonacci (n, mem)_  
+Algorthm _Fibonacci (n, mem[1..n])_  
 //Input: n-ésimo número de Fibonacci e um array de mémoria
 //Output: seu valor  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** mem[n] != -1 **return** mem[n]  
@@ -34,8 +34,42 @@ Algorthm _Fibonacci (n, mem)_
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**return** mem[n]  
 
 <p align="justify">
-d)	
+d)	Dado um valor V, se quisermos fazer a mudança para V centavos, e tivermos um suprimento infinito de moedas com valor C = {C1, C2, .., Cn}, qual é o número mínimo de moedas para fazer a mudança? Se não for possível fazer alterações, imprima -1. Exemplo:  
+
+Entrada: moedas [] = {25, 10, 5}, V = 30
+
+Saída: Mínimo 2 moedas necessárias
+  
+Recursivamente:
 </p>
+
+Algorthm _minCoins (coins[0..n-1], V)_  
+//Input: array de moedas e o valor que deseja formar  
+//Output: número mínimo de moedas para fazer a mudança  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** V == 0 **return** 0  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;res = INT_MAX  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**for** i = 0 **to** i < coins.size() **do**  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** coins[i] <= V  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sub_res = minCoins(coins, V - coins[i])  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** (sub_res != INT_MAX && sub_res + 1 < res) res = sub_res + 1  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**return** res 
+
+<p align="justify">
+Programação diâmica:	
+</p>
+
+Algorthm _minCoins (coins[0..n-1], V)_  
+//Input: array de moedas e o valor que deseja formar  
+//Output: número mínimo de moedas para fazer a mudança  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mem[ ] = V + 1  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mem[0] = 0  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**for** i = 1 **to** i <= V **do**  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**for** j = 0 **to** j < coins.size() **do**  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** coins[i] <= i  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sub_res = mem[i - coins[j]]  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** (sub_res != INT_MAX && sub_res + 1 < res) res = sub_res + 1  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** mem[V] == INT_MAX **return** -1  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**return** mem[V]  
 
 <p align="justify">
 4)	

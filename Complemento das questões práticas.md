@@ -98,42 +98,6 @@ Algorthm _max (A[0...n-1],l,r)_
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**else return** r  
 
 <p align="justify">
-a) Em um algoritmo estável, quando vários elementos do arranjo tiverem o mesmo valor, a saída do método deve ter em seu menor índice o primeiro elemento que aparece (considerando o intervalo de elementos iguais), e assim em diante até o fim do intervalo.
-</p>
-
-<p align="justify">
-b) Relação de recorrência: G(n) = G(n/2) + 1
-  
-  Solução da recorrência utilizando o Wolfram Alpha: G(n) = log<sub>2</sub>n
-  
-  Portanto, crescimento logarítmico
-</p>
-
-<p align="justify">
-c)  
-</p>
-
-Algorthm _maxA (A[0...n-1],n)_  
-//Input: array qualquer e seu tamanho  
-//Output: o índice do maior elemento do array  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** n = 1 **return** 0  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** A[0] > A[1] max = 0  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**else** max = 1  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**for** i = 2 **to** n - 1 **do**  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** A[i] >= A[max] max = i  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**return** max 
-
-<p align="justify">
-  A operação básica é executada n - 2 vezes
-  
-  Solução: G(n) = n
-  
-  Portanto, crescimento linear 
-  
-O algoritmo de divisão e conquista é aproximadamente 0,69 vezes mais rápido que o de força bruta.  
- </p>
-
-<p align="justify">
 5)	
 </p>
 

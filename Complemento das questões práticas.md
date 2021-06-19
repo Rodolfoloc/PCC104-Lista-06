@@ -72,7 +72,13 @@ Algorthm _minCoins (coins[0..n-1], V)_
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**return** mem[V]  
 
 <p align="justify">
-4)	
+e)	Várias moedas são colocadas em células de um
+Placa n × m, não mais do que uma moeda por célula. Um robô, localizado na célula superior esquerda
+do tabuleiro, precisa coletar o máximo de moedas possível e trazê-las para
+a célula inferior direita. Em cada etapa, o robô pode mover qualquer uma das células para a direita
+ou uma célula abaixo de sua localização atual. Quando o robô visita uma célula com uma moeda,
+ele sempre pega essa moeda. Projete um algoritmo para encontrar o número máximo de
+moedas que o robô pode coletar e um caminho que ele precisa seguir para fazer isso.
 </p>
 
 Algorthm _mergemax (A[0...n-1],l,r)_  

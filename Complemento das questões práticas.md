@@ -72,87 +72,30 @@ Algorthm _minCoins (coins[0..n-1], V)_
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**return** mem[V]  
 
 <p align="justify">
-e)	Várias moedas são colocadas em células de um
-Placa n × m, não mais do que uma moeda por célula. Um robô, localizado na célula superior esquerda
-do tabuleiro, precisa coletar o máximo de moedas possível e trazê-las para
-a célula inferior direita. Em cada etapa, o robô pode mover qualquer uma das células para a direita
-ou uma célula abaixo de sua localização atual. Quando o robô visita uma célula com uma moeda,
-ele sempre pega essa moeda. Projete um algoritmo para encontrar o número máximo de
-moedas que o robô pode coletar e um caminho que ele precisa seguir para fazer isso.
+e)	Várias moedas são colocadas em células de um tabuleiro n×m (uma moeda por célula). Um robô, localizado na célula superior esquerda, precisa coletar o máximo de moedas possível e trazê-las para célula inferior direita. Em cada etapa, o robô pode mover qualquer uma das células para a direita ou uma célula abaixo de sua localização atual. Quando o robô visita uma célula com uma moeda, ele sempre pega a moeda. O algoritmo encontra o número máximo de moedas que o robô pode coletar e um caminho que ele precisa seguir para fazer isso.
 </p>
 
-Algorthm _mergemax (A[0...n-1],l,r)_  
-//Input: array qualquer e seus índices inicial e final  
-//Output: o índice do maior elemento do array  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** l < r  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;m = l + (r - l) / 2  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;maxLeft = mergemax(A, l, m)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;maxRight = mergemax(A, m + 1, r)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**return** max(A, maxLeft, maxRight)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**return** max(A, l, r);  
-
-Algorthm _max (A[0...n-1],l,r)_  
-//Input: array qualquer e seus índices inicial e final  
-//Output: o índice do maior elemento do subarray  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** A[l] > A[r] **return** l  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**else return** r  
+Algorthm _maxCoinsRec (A[0...n-1]_ _[0...m-1],i,j)_  
+//Input: array qualquer e seus tamanhos  
+//Output: número máximo de moedas que o robô pode coletar  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** i < 0 **or** i == n **or** j < 0 **or** j == m **return** 0  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**return** A[i][j] + max(maxCoinsRec(A, i + 1, j), maxCoinsRec(A, i, j + 1))   
 
 <p align="justify">
-5)	
+f)	
 </p>
 
-Algorthm _mergemaxmin (A[0...n-1],l,r,min,max)_  
-//Input: array qualquer, seus índices inicial e final, menor e maior elemento do dado   
-//Output: valor mínimo e máximo do array  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** l = r  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** max < A[l] max = A[l]  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** min > A[r]) min = A[r]  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**return**  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** r - l = 1  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** A[l] < A[r])  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** min > A[l]) min = A[l]  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** max < A[r]) max = A[r]  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**else**   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** min > A[r]) min = A[r]  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** max < A[l]) max = A[l]  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**return**  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;m = l + (r - l) / 2  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mergemaxmin(A, l, m, min, max)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mergemaxmin(A, m + 1, r, min, max)  
+Algorthm _maxCoinsRec (A[0...n-1]_ _[0...m-1],mem[0...n-1]_ _[0...m-1],i,j)_  
+//Input: array qualquer, seus tamanhos e array para mémoria  
+//Output: número máximo de moedas que o robô pode coletar  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** i < 0 **or** i == n **or** j < 0 **or** j == m **return** 0  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** mem[i][j] != -1 **return** mem[i][j]  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mem[i][j] = A[i][j] + max(maxCoinsRec(A, mem, i + 1, j), maxCoinsRec(A, mem, i, j + 1))  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**return** mem[i][j]
 
 <p align="justify">
-a) Relação de recorrência: G(n) = G(n/2) + n - 2
-  
-  Solução da recorrência utilizando o Wolfram Alpha: G(n) = 2n
-  
-  Portanto, crescimento linear
+g) 
 </p>
-
-<p align="justify">
-b)  
-</p>
-
-Algorthm _minmax (A[0...n-1],n,min,max)_  
-//Input: array qualquer, seu tamanho, menor e maior elemento do dado     
-//Output: o índice do menor e do maior elemento do array  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** n = 1   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;max = A[0]  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;min = A[0]  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**return** minmax  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**for** i = 0 **to** n - 1 **do**  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** A[i] > max max = A[i]  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**else** A[i] < min min = A[i]  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**return** minmax 
-    
-<p align="justify">
-  A operação básica é executada n - 1 vezes
-  
-  Solução: G(n) = n
-  
-  Portanto, crescimento linear 
-  
-O algoritmo de divisão e conquista tem o mesmo comportamento assintótico que o de força bruta.  
- </p>
 
 <p align="justify">
 6)	O quick sort seleciona um elemento como pivô e particiona o array fornecido ao redor do pivô selecionado. Existem muitas versões diferentes do quickSort que selecionam o pivô de maneiras diferentes:

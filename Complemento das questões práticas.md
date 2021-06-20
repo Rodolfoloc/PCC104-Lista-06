@@ -46,7 +46,7 @@ Recursivamente:
 Algorthm _minCoins (coins[0..n-1], V)_  
 //Input: array de moedas e o valor que deseja formar  
 //Output: número mínimo de moedas para fazer a mudança  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** V == 0 **return** 0  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** V = 0 **return** 0  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;res = INT_MAX  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**for** i = 0 **to** i < coins.size() **do**  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** coins[i] <= V  
@@ -78,7 +78,7 @@ e)	Várias moedas são colocadas em células de um tabuleiro n×m (uma moeda por
 Algorthm _maxCoinsRec (A[0...n-1]_ _[0...m-1],i,j)_  
 //Input: array qualquer e seus tamanhos  
 //Output: número máximo de moedas que o robô pode coletar  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** i < 0 **or** i == n **or** j < 0 **or** j == m **return** 0  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** i < 0 **or** i = n **or** j < 0 **or** j = m **return** 0  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**return** A[i][j] + max(maxCoinsRec(A, i + 1, j), maxCoinsRec(A, i, j + 1))   
 
 <p align="justify">
@@ -88,14 +88,39 @@ f)
 Algorthm _maxCoinsRec (A[0...n-1]_ _[0...m-1],mem[0...n-1]_ _[0...m-1],i,j)_  
 //Input: array qualquer, seus tamanhos e array para mémoria  
 //Output: número máximo de moedas que o robô pode coletar  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** i < 0 **or** i == n **or** j < 0 **or** j == m **return** 0  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** i < 0 **or** i = n **or** j < 0 **or** j = m **return** 0  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** mem[i][j] != -1 **return** mem[i][j]  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mem[i][j] = A[i][j] + max(maxCoinsRec(A, mem, i + 1, j), maxCoinsRec(A, mem, i, j + 1))  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**return** mem[i][j]
 
 <p align="justify">
 g) 
+  
+Recursivamente:
 </p>
+
+Algorthm _knapSack (W,wt[0...m-1],val[0...n-1],n)_  
+//Input: capacidade da mochila, pesos e valores associados a n itens  
+//Output: número máximo de itens que cabem na mochila  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** n = 0 **or** W = 0 **return** 0   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** wt[n - 1] > W **return** knapSack(W, wt, val, n - 1)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**else return** max(val[n - 1] + knapSack(W - wt[n - 1], wt, val, n - 1), knapSack(W, wt, val, n - 1));
+
+<p align="justify">
+Programação diâmica:	
+</p>
+
+Algorthm _knapSack (W,wt[0...m-1],val[0...n-1], mem[0...n-1]_ _[0...W],n)_  
+//Input: capacidade da mochila, pesos e valores associados a n itens e array para mémoria   
+//Output: número máximo de itens que cabem na mochila  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** n < 0 **return** 0   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** mem[n][W] != -1) **return** mem[n][W]  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** wt[n] > W  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mem[n][W] = knapSack(W, wt, val,mem, n - 1)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**return** mem[n][W]  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**else**  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mem[n][W] = max(val[n] + knapSack(W - wt[n], wt, val, mem, n - 1), knapSack(W, wt, val,mem, n - 1))  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**return** mem[n][W]
 
 <p align="justify">
 6)	O quick sort seleciona um elemento como pivô e particiona o array fornecido ao redor do pivô selecionado. Existem muitas versões diferentes do quickSort que selecionam o pivô de maneiras diferentes:

@@ -122,14 +122,28 @@ Algorthm _knapSack (W,wt[0...m-1],val[0...n-1], mem[0...n-1]_ _[0...W],n)_
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mem[n][W] = max(val[n] + knapSack(W - wt[n], wt, val, mem, n - 1), knapSack(W, wt, val,mem, n - 1))  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**return** mem[n][W]
 
+**2. Backtracking**
 <p align="justify">
-6)	O quick sort seleciona um elemento como pivô e particiona o array fornecido ao redor do pivô selecionado. Existem muitas versões diferentes do quickSort que selecionam o pivô de maneiras diferentes:
+a)	Backtracking é um refinamento de força bruta, no qual boa parte das soluções podem ser eliminadas sem ser explicitamente examinadas. Se aplica em:
 </p>
 
-* Primeiro elemento como pivô.
-* Último elemento como pivô
-* Elemento aleatório como pivô.
-* Mediana como pivô (Implementado).
+* Problemas cuja solução pode ser definida a partir de uma sequência de decisões.
+* Problemas que podem ser modelados por uma árvore que representa todas as possíveis seqüências de decisão. 
+
+<p align="justify">
+Se existir mais de uma decisão disponível para cada uma das n decisões, o backtracking será exponencial. A eficiência da estratégia depende da possibilidade de limitar a busca, ou seja, podar a árvore eliminando os ramos que não levam à solução desejada. Para tanto é necessário definir um espaço de solução para o problema que inclua a solução ótima e que possa ser pesquisada de forma organizada (tipicamente como uma árvore). Portanto, é uma técnica com procedimentos de busca que corresponde ao retorno de uma exploração. Ex: Busca em profundidade: Quando chegamos a um nó v pela primeira vez, cada aresta incidente a v é explorada e então o controle volta (backtracks) ao nó a partir do qual v foi alcançado.  
+</p>
+
+<p align="justify">
+b)	O 
+</p>
+
+
+
+
+
+
+
 
 <p align="justify">
 O principal processo no quickSort é a partição. O objetivo das partições é, dado um array e um pivô x, colocar x em sua posição correta na matriz classificada de forma que todos os elementos menores que x fiquem a esquerda e todos os elementos maiores que x fiquem a direita.

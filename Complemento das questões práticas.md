@@ -135,10 +135,26 @@ Se existir mais de uma decisão disponível para cada uma das n decisões, o bac
 </p>
 
 <p align="justify">
-b)	O 
+b)	O problema das n-rainhas é colocar N rainhas de xadrez em um tabuleiro de xadrez NxN para que duas rainhas não ataquem uma à outra.
 </p>
 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1) Comece na coluna mais à esquerda  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2) Se todas as rainhas forem colocadas  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;retornar verdadeiro  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3) Experimente todas as linhas da coluna atual.  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Faça o seguinte para cada linha experimentada:  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a) Se a rainha puder ser colocada com segurança nesta linha  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;marque esta [linha,coluna] como parte da solução e verifique recursivamente se a posiçãoda rainha leva a uma solução.  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b) Se colocar a rainha em [linha,coluna] leva a uma solução  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;então retorna verdadeiro.  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c) Se a colocação da rainha não levar a uma solução  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;então desmarque esta [linha,coluna] (Backtrack) e vá para etapa (a) para tentar outras linhas.  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3) Se todas as linhas foram tentadas e nada funcionou  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;retorna false para acionar o retrocesso.  
 
+<p align="justify">
+c)	O 
+</p>
 
 
 

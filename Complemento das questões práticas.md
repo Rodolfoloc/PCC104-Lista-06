@@ -169,21 +169,24 @@ Saída: Um array [V] que deve ter números de 1 a m, representando as cores. O c
 5 - Se alguma função recursiva retornar true, interrompa o loop e retorne true.  
 6 - Se nenhuma função recursiva retornar true, retorne false.
 
-
-
-
-
-
-
-
-
 <p align="justify">
-7)	O algoritmo partition desloca o índice i até encontrar o primeiro elemento A[i] maior ou igual ao pivô e o índice j até encontrar o primeiro elemento A[j] menor ou igual ao pivô. Troca-se a[i] com a[j] enquanto os índices i e j não se cruzarem. As indicações P1 e P2 indicam essas trocas:
+d)	Caminho hamiltoniano em um grafo não direcionado é um caminho que visita cada vértice exatamente uma vez.
+
+Algoritmo:
+
+Entrada: Um array [V] [V] onde V é o número de vértices no grafo (matriz de adjacência do grafo).
+
+Saída: Um array [V] que deve conter o Circuito Hamiltoniano. O código deve retornar falso se o grafo não contiver um Circuito Hamiltoniano.
 </p>
 
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/81366236/117058520-18532800-acf5-11eb-98b7-96c3b9d87c7d.png">
-</p>
+1 - Criar uma matriz de caminhos e adicionar o vértice 0 a ela.  
+2 - Adicionar outros vértices, começando pelo vértice 1. Antes de adicionar um vértice, verifique se ele é adjacente ao vértice adicionado anteriormente e se já não foi adicionado.  
+3 - Se encontrar tal vértice, adicionar o vértice como parte da solução. Se não encontrar o vértice, retorne falso.  
+
+
+
+
+
 
 <p align="justify">
 8)	O exemplo da questão anterior mostra que o quick sort não é estável, pois na segunda chamada do método ele troca o primeiro 'E' com o 'A', colocando-o na terceira posição. Desta forma, o primeiro 'E' que aparece ocupa a segunda posição do intervalo, mostrando assim que não é um algoritmo estável.

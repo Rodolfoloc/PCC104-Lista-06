@@ -183,14 +183,18 @@ Saída: Um array [V] que deve conter o Circuito Hamiltoniano. O código deve ret
 2 - Adicionar outros vértices, começando pelo vértice 1. Antes de adicionar um vértice, verifique se ele é adjacente ao vértice adicionado anteriormente e se já não foi adicionado.  
 3 - Se encontrar tal vértice, adicionar o vértice como parte da solução. Se não encontrar o vértice, retorne falso.  
 
-
-
-
-
+**3. Branch and Bound**
+<p align="justify">
+a)	O método de Branch and bound é um algoritmo para encontrar soluções ótimas para vários problemas de otimização, especialmente em otimização combinatória. Consiste em uma enumeração sistemática de todos os candidatos a solução, através da qual grandes subconjuntos de candidatos que não levam a solução ótima descartados em massa utilizando os limites superior e inferior da quantia otimizada.
+O Backtracking retorna a primeira solução encontrada, que na maioria das vezes não é ótima. Enquanto isso, o Branch and bound tenta encontrar soluções ótimas.
+</p>
 
 <p align="justify">
-8)	O exemplo da questão anterior mostra que o quick sort não é estável, pois na segunda chamada do método ele troca o primeiro 'E' com o 'A', colocando-o na terceira posição. Desta forma, o primeiro 'E' que aparece ocupa a segunda posição do intervalo, mostrando assim que não é um algoritmo estável.
+b)	O
 </p>
+
+
+
 
 <p align="justify">
 9)	Uma árvore binária onde cada nó tem no máximo dois filhos. Possui as seguintes propriedades:  

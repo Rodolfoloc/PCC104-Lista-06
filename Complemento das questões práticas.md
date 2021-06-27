@@ -153,49 +153,29 @@ b)	O problema das n-rainhas é colocar N rainhas de xadrez em um tabuleiro de xa
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;retorna false para acionar o retrocesso.  
 
 <p align="justify">
-c)	O 
-</p>
+c)	O algoritmo determina se o grafo pode ser colorido com no máximo m cores, de forma que dois vértices adjacentes do grafo não sejam coloridos com a mesma cor.
 
-
-
-
-
-
-<p align="justify">
-O principal processo no quickSort é a partição. O objetivo das partições é, dado um array e um pivô x, colocar x em sua posição correta na matriz classificada de forma que todos os elementos menores que x fiquem a esquerda e todos os elementos maiores que x fiquem a direita.
-</p>
-
-Algorthm _partition (A[0...n-1],l,r,i,j)_  
-//Input: array qualquer, seus índices inicial e final, índices dos sub-arranjos após a partição  
-//Output: parte do array ordenado  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i = l  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;j = r  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pivot = A[(i + j) / 2]  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**do**   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**while** pivot > A[i] ++i  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**while** pivot < A[j] --j  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** i <= j  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;swap(A[i],A[j])  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;++i  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--j  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**while** i <= j  
-
-Algorthm _quicksort (A[0...n-1],l,r)_  
-//Input: array qualquer e seus índices inicial e final
-//Output: array ordenado  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i = 0  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;j = 0  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;partition(A, l, r, i, j)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** l < j quicksort(A, l, j)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**if** i < r quicksort(A, i, r)  
-
-<p align="justify">
-Relação de recorrência: G(n) = 2G(n/2) + n
-
-Solução da recorrência utilizando o Wolfram Alpha: G(n) = nlog<sub>2</sub>n
+Algoritmo:
   
-Portanto, crescimento logarítmico linear
+Entrada: Um array [V] [V] onde V é o número de vértices no grafo (matriz de adjacência do grafo) e um inteiro m que é o número máximo de cores que podem ser usadas.
+
+Saída: Um array [V] que deve ter números de 1 a m, representando as cores. O código deve retornar falso se o grafo não puder ser colorido com m cores.
 </p>
+
+1 - Crie uma função recursiva que obtém o grafo, o índice atual, o número de vértices e o array de cores.  
+2 - Se o índice atual for igual ao número de vértices. Imprima a configuração de cores na matriz de saída.  
+3 - Atribua uma cor a um vértice.  
+4 - Para cada cor atribuída, verifique se a configuração é segura (ou seja, verifique se os vértices adjacentes não têm a mesma cor) chame recursivamente a função com o próximo índice e número de vértices.  
+5 - Se alguma função recursiva retornar true, interrompa o loop e retorne true.  
+6 - Se nenhuma função recursiva retornar true, retorne false.
+
+
+
+
+
+
+
+
 
 <p align="justify">
 7)	O algoritmo partition desloca o índice i até encontrar o primeiro elemento A[i] maior ou igual ao pivô e o índice j até encontrar o primeiro elemento A[j] menor ou igual ao pivô. Troca-se a[i] com a[j] enquanto os índices i e j não se cruzarem. As indicações P1 e P2 indicam essas trocas:

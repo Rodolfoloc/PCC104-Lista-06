@@ -191,6 +191,8 @@ O Backtracking retorna a primeira solução encontrada, que na maioria das vezes
 
 <p align="justify">
 b)	A entrada é um arquivo de texto padrão ASCII. Cada linha é formada por uma seqüência de valores inteiros separados por um espaço. Os valores codificam a distância entre dois vértices u e v, ou seja, o custo de cada aresta (u,v). Como a matriz de distâncias é simétrica e não é necessário representar a diagonal principal (pois todos os seus valores são 0), temos que o arquivo representa apenas o triângulo superior direito da matriz. Ou seja, convencionando que os vértices são indexados de 1 a V, temos que a primeira linha codifica os custos das arestas (1,2) a (1,V), a segunda linha codifica os custos de (2,3) a (2,V), e assim por diante, até a (V - 1)-ésima linha, que codifica o custo da aresta (V - 1,V). Obviamente, pela simetria da matriz, a primeira linha do arquivo também codifica os custos das arestas (2,1) a (V,1), etc. O programa determina a quantidade de vértices a partir do número de valores descritos na primeira linha de dados, a não ser que essa quantidade seja informada como parâmetro de linha de comando.
+  
+Existem 57! rotas possíveis.
 </p>
 
 <p align="justify">

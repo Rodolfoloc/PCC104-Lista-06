@@ -194,7 +194,3 @@ b)	A entrada é um arquivo de texto padrão ASCII. Cada linha é formada por uma
   
 Existem 57! rotas possíveis.
 </p>
-
-<p align="justify">
-c)	U 
-</p>
